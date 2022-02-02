@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Routes, Route, Navigate, HashRouter} from "react-router-dom";
 import {Main} from "./Components/Main/Main"
-import {Home} from './Components/Home/Home'
+import {Home} from "./Components/Home/Home"
 import { Domiciles } from "./Components/Domiciles/Domiciles";
+import {Unselect} from "./Components/Domiciles/ProductCategories/Unselect/Unselect"
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
@@ -12,6 +13,7 @@ ReactDOM.render(
         <Route path="/" element={ <Main/>}>
           <Route path="/" element={<Home/>} />
           <Route path="/domiciles" element={<Domiciles/>}>
+            <Route path="/domiciles" element={<Unselect/>}/>
             <Route path="/domiciles/pizzas" element={<Home/>}/>
           </Route>
           <Route path="/shopping_card" element={<h1>Carrito de Compra</h1>} />

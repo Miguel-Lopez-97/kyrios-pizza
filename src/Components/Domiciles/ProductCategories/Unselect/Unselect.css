@@ -1,0 +1,11 @@
+.unselectCategory{
+      align-items:center;
+      background-color: var(--colorRed);
+      color: var(--colorNavWhite);
+      display: flex;
+      font-family: 'Open Sans', sans-serif;;
+      height: 15vh;
+      justify-content: center;
+      text-align: center;
+      width: 100vw;
+  }
