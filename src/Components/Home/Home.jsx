@@ -6,7 +6,15 @@ export function Home(){
     return(
         <div className="containerHome">
             <section></section>
-            <section></section>
+            <section className="socialHome">
+                <div className="logoHome">
+                    <img src="https://drive.google.com/uc?export=download&id=1qynz1kaVgJnrVVASKH2eKCslhoTuSBK_" alt="logo"/>
+                </div>
+                <div className="storyHome">
+                    <h2>Comidas Rapidas Kyrio's Pizza</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, delectus. Mollitia itaque optio exercitationem ipsum, eos aut consectetur perferendis aperiam. Facere nisi amet nobis dignissimos cumque, pariatur ipsum et ipsam.</p>
+                </div>
+            </section>
             <section className="contactHome">
                 <div className="contactLocation">
                     <h2>Visitanos</h2>
