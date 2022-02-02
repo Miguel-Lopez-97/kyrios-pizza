@@ -1,0 +1,39 @@
+.NavBarMenu {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2vw;
+}
+.NavBarMenu a {
+  align-items: center;
+  background-color: var(--colorRed);
+  color: var(--colorNavWhite);
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  margin-bottom: 1vh;
+  min-width: min(30vw, 25%);
+  padding: 2vh 0;
+  text-decoration: none;
+}
+
+@media (max-width: 480px){
+    .NavBarMenu a {font-size: 0.8rem;
+        width: 55vw;
+   }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+    .NavBarMenu a {font-size: 1.2rem;
+        width: 60vw;}
+}
+@media (min-width: 770px) and (max-width: 993px) {
+    .NavBarMenu a {font-size: 1.6rem;
+        width: 65vw;}
+}
+@media (min-width: 994px) {
+    .NavBarMenu a {font-size: 2rem;
+        width: 70vw;}
+}

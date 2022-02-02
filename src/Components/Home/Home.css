@@ -183,7 +183,7 @@
     padding: 2vw;
   }
 }
-@media (min-width: 769px) and (max-width: 993px) {
+@media (min-width: 770px) and (max-width: 993px) {
   .carouselImageHome .imageHome {
     height: 80vh;
   }
