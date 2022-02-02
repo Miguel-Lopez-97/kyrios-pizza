@@ -3,6 +3,7 @@
   color: var(--colorTextBlack);
   display: flex;
   flex-direction: column;
+  margin-top: 10vh;
   width: 100vw;
 }
 .contactHome {
