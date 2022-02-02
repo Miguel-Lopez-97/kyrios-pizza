@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--colorRed) 20%, var(--colorOrange) 80%);
+    width: 100vw;
+}

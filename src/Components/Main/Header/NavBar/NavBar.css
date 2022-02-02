@@ -1,0 +1,21 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  width: 99vw;
+}
+.NavBar a {
+  align-items: center;
+  background-color: var(--colorOldRed);
+  color: var(--colorNavWhite);
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  justify-content: center;
+  min-width: min(30vw, 25%);
+  padding: 2vh;
+  text-decoration: none;
+}
+.NavBar a img {
+  align-self: center;
+  display: flex;
+  max-width: 40px;
+}

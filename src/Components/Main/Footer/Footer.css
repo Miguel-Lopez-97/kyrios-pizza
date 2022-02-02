@@ -1,0 +1,14 @@
+footer{
+    background-color: var(--colorOldRed);
+    color: var(--colorTextWhite);
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2vh;
+}
+footer h3{
+    margin:1vh
+}

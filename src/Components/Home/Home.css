@@ -1,0 +1,129 @@
+.containerHome{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    color: var(--colorTextBlack);
+}
+
+.contactHome{
+    display: flex;
+    width: 90vw;
+    text-align: center;
+    margin-top: 5vh;
+    padding: 5vh;
+}
+.contactLocation, .contactPhones{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+    -ms-border-radius: 5vh;
+    -o-border-radius: 5vh;
+    background-color: var(--colorDivInfo);
+}
+
+.contactLocation iframe{
+    width: 90%;
+    height: auto;
+    margin:2vw;
+    border:0;
+}
+
+.contactLocation h3{
+    padding: 0 2vw;
+}
+
+.contactPhones .phoneNumber img{
+    max-width: 20px;
+    margin: 2vw;
+}
+
+.phoneNumber{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+@media (max-width: 480px){
+    .contactHome{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contactLocation, .contactPhones{
+        width: 90%;
+    }
+
+    .contactLocation{
+        height: 70vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .contactPhones{
+       margin-top: 5vh;
+       height: 40vh;
+       justify-content: space-around;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 769px){
+    .contactHome{
+        align-items: center;
+        justify-content: space-between;
+        height: 60vh;
+    }
+    .contactLocation{
+        width: 55%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .contactPhones{
+        width: 35%;
+        justify-content: space-around;
+        height: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 993px){
+    .contactHome{
+        align-items: center;
+        justify-content: space-between;
+        height: 80vh;
+    }
+    .contactLocation{
+        width: 60%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .contactLocation iframe{
+        height: 50vh;
+    }
+    .contactPhones{
+        width: 35%;
+        justify-content: space-around;
+        height: 100%;
+    }
+}
+
+@media (min-width: 994px){
+    .contactHome{
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    .contactLocation{
+        width: 65%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .contactLocation iframe{
+        height: 70vh;
+    }
+    .contactPhones{
+        width: 30%;
+        justify-content: space-around;
+        height: 100%;
+    }
+}
