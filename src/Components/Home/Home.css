@@ -1,240 +1,272 @@
-.containerHome{
+.containerHome {
+  align-items: center;
+  color: var(--colorTextBlack);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.contactHome {
+  display: flex;
+  margin-top: 5vh;
+  padding: 5vh;
+  text-align: center;
+  width: 90vw;
+}
+.contactLocation,
+.contactPhones {
+  -moz-border-radius: 5vh;
+  -ms-border-radius: 5vh;
+  -o-border-radius: 5vh;
+  -webkit-border-radius: 5vh;
+  background-color: var(--colorDivInfo);
+  border-radius: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+.contactLocation iframe {
+  height: auto;
+  margin: 2vw;
+  width: 90%;
+
+  border: 0;
+}
+.contactLocation h3 {
+  padding: 0 2vw;
+}
+.contactPhones .phoneNumber img {
+  margin: 2vw;
+  max-width: 20px;
+}
+.phoneNumber {
+  align-items: center;
+  align-self: center;
+  display: flex;
+}
+.socialHome {
+  display: flex;
+  width: 90vw;
+}
+.socialHome .logoHome {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.socialHome .logoHome img {
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: var(--colorTextBlack) solid 3px;
+}
+.socialHome .storyHome {
+  -moz-border-radius: 5vh;
+  -ms-border-radius: 5vh;
+  -o-border-radius: 5vh;
+  -webkit-border-radius: 5vh;
+  background-color: var(--colorDivInfo);
+  border-radius: 5vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  text-align: justify;
+}
+.socialHome .storyHome h2 {
+  text-align: center;
+}
+.carouselImageHome {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  width: 90vw;
+}
+.carouselImageHome .imageHome {
+  align-items: center;
+  background-color: var(--colorTextBlack);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+}
+.carouselImageHome .imageHome #carouselImage {
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.buttonsCarousel{
     display: flex;
-    width: 100vw;
-    flex-direction: column;
+    min-width: 50vw;
+    margin-top: 1vw;
+    justify-content: space-around;
+}
+
+@media (max-width: 480px) {
+  .carouselImageHome .imageHome {
+    height: 50vh;
+  }
+  .contactHome {
     align-items: center;
-    color: var(--colorTextBlack);
-}
-
-.contactHome{
-    display: flex;
-    width: 90vw;
-    text-align: center;
-    margin-top: 5vh;
-    padding: 5vh;
-}
-.contactLocation, .contactPhones{
-    display: flex;
     flex-direction: column;
-    border-radius: 5vh;
-    -webkit-border-radius: 5vh;
-    -moz-border-radius: 5vh;
-    -ms-border-radius: 5vh;
-    -o-border-radius: 5vh;
-    background-color: var(--colorDivInfo);
-}
-
-.contactLocation iframe{
+  }
+  .contactLocation,
+  .contactPhones {
     width: 90%;
-    height: auto;
-    margin:2vw;
-    border:0;
-}
-
-.contactLocation h3{
-    padding: 0 2vw;
-}
-
-.contactPhones .phoneNumber img{
-    max-width: 20px;
-    margin: 2vw;
-}
-
-.phoneNumber{
-    display: flex;
-    align-self: center;
+  }
+  .contactLocation {
     align-items: center;
-}
-
-.socialHome{
-    display: flex;
-    width: 90vw;
-}
-.socialHome .logoHome{
-    display: flex;
-    justify-content: center;
+    height: 70vh;
+    justify-content: space-around;
+  }
+  .contactPhones {
+    height: 40vh;
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+  .socialHome {
     align-items: center;
-}
-.socialHome .logoHome img{
-    border: var(--colorTextBlack) solid 3px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-
-.socialHome .storyHome{
-    display: flex;
     flex-direction: column;
+    margin-top: 5vh;
+  }
+  .socialHome .logoHome {
+    margin-bottom: 5vh;
+  }
+  .socialHome .storyHome {
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    width: 90%;
+  }
+  .socialHome .storyHome p {
     padding: 2vw;
-    text-align: justify;
-    border-radius: 5vh;
-    -webkit-border-radius: 5vh;
-    -moz-border-radius: 5vh;
-    -ms-border-radius: 5vh;
-    -o-border-radius: 5vh;
-    background-color: var(--colorDivInfo);
+  }
 }
-.socialHome .storyHome h2{
-    text-align: center;
+@media (min-width: 481px) and (max-width: 769px) {
+  .carouselImageHome .imageHome {
+    height: 60vh;
+  }
+  .contactHome {
+    align-items: center;
+    height: 60vh;
+    justify-content: space-between;
+  }
+  .contactLocation {
+    height: 100%;
+    justify-content: space-evenly;
+    width: 55%;
+  }
+  .contactPhones {
+    height: 100%;
+    justify-content: space-around;
+    width: 35%;
+  }
+  .socialHome {
+    align-items: center;
+    margin-top: 5vh;
+  }
+  .socialHome .logoHome {
+    margin-right: 5vh;
+  }
+  .socialHome .storyHome {
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 2vw;
+    width: 60vw;
+  }
+  .socialHome .storyHome p {
+    padding: 2vw;
+  }
 }
-
-@media (max-width: 480px){
-    .contactHome{
-        flex-direction: column;
-        align-items: center;
-    }
-    .contactLocation, .contactPhones{
-        width: 90%;
-    }
-
-    .contactLocation{
-        height: 70vh;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .contactPhones{
-       margin-top: 5vh;
-       height: 40vh;
-       justify-content: space-around;
-    }
-    .socialHome{
-        flex-direction: column;
-        margin-top: 5vh;
-        align-items: center;
-    }
-    .socialHome .logoHome{
-        margin-bottom: 5vh;
-    }
-    .socialHome .storyHome{
-        width: 90%;
-        min-height: 40vh;
-        justify-content: center;
-        align-items: center;
-    }
-    .socialHome .storyHome p{
-        padding: 2vw;    
-    }
+@media (min-width: 769px) and (max-width: 993px) {
+  .carouselImageHome .imageHome {
+    height: 80vh;
+  }
+  .contactHome {
+    align-items: center;
+    height: 80vh;
+    justify-content: space-between;
+  }
+  .contactLocation {
+    height: 100%;
+    justify-content: space-evenly;
+    width: 60%;
+  }
+  .contactLocation iframe {
+    height: 50vh;
+  }
+  .contactPhones {
+    height: 100%;
+    justify-content: space-around;
+    width: 35%;
+  }
+  .socialHome {
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+  .socialHome .storyHome {
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    min-height: 50vh;
+    width: 50vw;
+  }
+  .socialHome .storyHome p {
+    padding: 2vw;
+  }
+  .socialHome .logoHome {
+    width: 35vw;
+  }
+  .socialHome .logoHome img {
+    width: 90%;
+  }
 }
-
-@media (min-width: 481px) and (max-width: 769px){
-    .contactHome{
-        align-items: center;
-        justify-content: space-between;
-        height: 60vh;
-    }
-    .contactLocation{
-        width: 55%;
-        height: 100%;
-        justify-content: space-evenly;
-    }
-    .contactPhones{
-        width: 35%;
-        justify-content: space-around;
-        height: 100%;
-    }
-    .socialHome{
-        margin-top: 5vh;
-        align-items: center;
-    }
-    .socialHome .logoHome{
-        margin-right: 5vh;
-    }
-    .socialHome .storyHome{
-        width: 60vw;
-        height: auto;
-        min-height: 50vh;
-        padding: 2vw;
-        justify-content: center;
-        align-items: center;
-    }
-    .socialHome .storyHome p{
-        padding: 2vw;    
-    }
-}
-
-@media (min-width: 769px) and (max-width: 993px){
-    .contactHome{
-        align-items: center;
-        justify-content: space-between;
-        height: 80vh;
-    }
-    .contactLocation{
-        width: 60%;
-        height: 100%;
-        justify-content: space-evenly;
-    }
-    .contactLocation iframe{
-        height: 50vh;
-    }
-    .contactPhones{
-        width: 35%;
-        justify-content: space-around;
-        height: 100%;
-    }
-    .socialHome{
-        margin-top: 5vh;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .socialHome .storyHome{
-        width: 50vw;
-        min-height: 50vh;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    }
-    .socialHome .storyHome p{
-        padding: 2vw;    
-    }
-    .socialHome .logoHome{
-        width: 35vw;
-    }
-    .socialHome .logoHome img{
-        width: 90%;
-    }
-}
-
-@media (min-width: 994px){
-    .contactHome{
-        align-items: center;
-        justify-content: space-between;
-        height: 100vh;
-    }
-    .contactLocation{
-        width: 65%;
-        height: 100%;
-        justify-content: space-evenly;
-    }
-    .contactLocation iframe{
-        height: 70vh;
-    }
-    .contactPhones{
-        width: 30%;
-        justify-content: space-around;
-        height: 100%;
-    }
-    .socialHome{
-        margin-top: 5vh;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .socialHome .storyHome{
-        width: 50vw;
-        min-height: 60vh;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    }
-    .socialHome .storyHome p{
-        padding: 2vw;    
-    }
-    .socialHome .logoHome{
-        width: 40vw;
-    }
-    .socialHome .logoHome img{
-        width: 90%;
-    }
+@media (min-width: 994px) {
+  .carouselImageHome .imageHome {
+    height: 90vh;
+  }
+  .contactHome {
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  .contactLocation {
+    height: 100%;
+    justify-content: space-evenly;
+    width: 65%;
+  }
+  .contactLocation iframe {
+    height: 70vh;
+  }
+  .contactPhones {
+    height: 100%;
+    justify-content: space-around;
+    width: 30%;
+  }
+  .socialHome {
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+  .socialHome .storyHome {
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    min-height: 60vh;
+    width: 50vw;
+  }
+  .socialHome .storyHome p {
+    padding: 2vw;
+  }
+  .socialHome .logoHome {
+    width: 40vw;
+  }
+  .socialHome .logoHome img {
+    width: 90%;
+  }
 }

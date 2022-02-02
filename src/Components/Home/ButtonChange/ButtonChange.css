@@ -1,0 +1,23 @@
+button.buttonChange img {
+  width: 50px;
+}
+button.buttonChange {
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  align-items: center;
+  background-color: var(--colorNavWhite);
+  border-radius: 50%;
+  border: 5px solid var(--colorOldRed);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+  z-index: 1;
+}
+@media (max-width: 769px){
+  button.buttonChange{
+    display: none;
+  }
+}

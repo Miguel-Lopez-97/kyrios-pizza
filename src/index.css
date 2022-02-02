@@ -13,6 +13,7 @@ body, *{
   --colorNavWhite:#f6f5f5;
   --colorTextBlack:#140000;
   --colorDivInfo:#f8f3a499;
+  --colorButtonCarousel:#370407;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Open+Sans:wght@600&display=swap');

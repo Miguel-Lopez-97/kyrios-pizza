@@ -1,38 +1,54 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { carouselImage } from "./CarouselImage";
+import { ButtonCarousel } from "./ButtonCarousel/ButtonCarousel";
+import { ButtonChange } from "./ButtonChange/ButtonChange";
 
 export function Home() {
   const [image, setImage] = useState(0);
-  var index = 0;
 
   const onRight = () => {
-    if (index < carouselImage.length) {
-      index++;
+    if (image < carouselImage.length - 1) {
+      setImage(image + 1);
     } else {
-      index = 0;
+      setImage(0);
     }
-    onDraw(index)
   };
   const onLeft = () => {
-    if (index>0) {
-      index--;
-    } if (index === 0) {
-      index = carouselImage.length-1;
+    if (image > 0) {
+      setImage(image - 1);
+    } else {
+      setImage(carouselImage.length - 1);
     }
-    onDraw(index)
   };
-  const onDraw=(a)=>{setImage(a)};
+  const onChange = (props) => {
+    setImage(props);
+  };
 
   return (
     <div className="containerHome">
       <section className="carouselImageHome">
-        <div>
-          <img src={carouselImage[image].url} alt="" />
+        <div className="imageHome">
+          <ButtonChange
+            key={"buttonChangeLeft"}
+            onChange={onLeft}
+            ico="https://drive.google.com/uc?export=download&id=1oCKFjxAWOLbh1bvUlYOBvf1txXu2oq3i"
+          />
+          <img id="carouselImage" src={carouselImage[image].url} alt="imagen" />
+          <ButtonChange
+            key={"buttonChangeRight"}
+            onChange={onRight}
+            ico="https://drive.google.com/uc?export=download&id=1ilO35o7k7KNaP8RjG5sk_bwyM08-wV1x"
+          />
         </div>
-        <div>
-        <button onClick={onLeft}>Izq</button>
-          <button onClick={onRight}>Derecha</button>
+        <div className="buttonsCarousel">
+          {carouselImage.map((el) => (
+            <ButtonCarousel
+              onChange={onChange}
+              key={"buttonImage" + el.id}
+              index={el.position}
+            />
+          ))}
         </div>
       </section>
       <section className="socialHome">
@@ -59,7 +75,7 @@ export function Home() {
           <iframe
             title="iframeMap"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15908.714756566289!2d-74.1427077!3d4.5618709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe7284b3a10fe707!2sComidas%20Rapidas%20Kyrios%20Pizza!5e0!3m2!1ses-419!2sco!4v1643654393583!5m2!1ses-419!2sco"
-            data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWVtYmVkJTIyJTJDJTIyYWRkcmVzcyUyMiUzQSUyMiUyMiUyQyUyMnpvb20lMjIlM0FudWxsJTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0FudWxsJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlMkMlMjJlbWJlZCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZS5jb20lMkZtYXBzJTJGZW1iZWQlM0ZwYiUzRCExbTE0ITFtOCExbTMhMWQxNTkwOC43MTQ3NTY1NjYyODkhMmQtNzQuMTQyNzA3NyEzZDQuNTYxODcwOSEzbTIhMWkxMDI0ITJpNzY4ITRmMTMuMSEzbTMhMW0yITFzMHgwJTI1M0EweGZlNzI4NGIzYTEwZmU3MDchMnNDb21pZGFzJTI1MjBSYXBpZGFzJTI1MjBLeXJpb3MlMjUyMFBpenphITVlMCEzbTIhMXNlcy00MTkhMnNjbyE0djE2NDM2NTQzOTM1ODMhNW0yITFzZXMtNDE5ITJzY28lMjIlN0Q="
+            loading="lazy"
           ></iframe>
         </div>
         <div className="contactPhones">
