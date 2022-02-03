@@ -7,7 +7,7 @@
     justify-content: space-evenly;
     height: auto;
     padding: 5px;
-    margin-bottom: 2vh;
+    margin-bottom: max(2vh,20px);
     background-color: var(--colorDivInfo);
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
