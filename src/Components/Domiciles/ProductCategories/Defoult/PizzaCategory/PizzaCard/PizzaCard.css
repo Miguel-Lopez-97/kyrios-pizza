@@ -1,4 +1,4 @@
-.productCard{
+.pizzaCard{
     display: flex;
     flex-direction: column;
     color: var(--colorTextBlack);
@@ -15,14 +15,29 @@
     -o-border-radius: 20px;
 }
 
-.productCard .productName{
+.pizzaCard .pizzaName{
     display: flex;
+    min-width: 80%;
+    flex-direction: column;
     height: auto;
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
 }
-.productCard .productFullDescription{
+.pizzaCard .pizzaSize{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    min-width: 80%;
+}
+
+.pizzaCard .pizzaSize button{
+    padding: 5px 10px;
+    min-width: 25px;
+    background-color: var(--colorOldRed);
+    color: var(--colorNavWhite);
+}
+.pizzaCard .pizzaFullDescription{
     display: flex;
     align-items: center;
     margin-bottom: 5px;
@@ -31,7 +46,7 @@
     justify-content: space-between;
 }
 
-.productCard .productFullDescription .productImage{
+.pizzaCard .pizzaFullDescription .pizzaImage{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +54,7 @@
     height: auto;
 }
 
-.productCard .productFullDescription .productImage img{
+.pizzaCard .pizzaFullDescription .pizzaImage img{
     border-radius: 50%;
     border: solid 2px var(--colorOldRed);
     height: 100px;
@@ -50,7 +65,7 @@
     -o-border-radius: 50%;
 }
 
-.productCard .productFullDescription .productInfo{
+.pizzaCard .pizzaFullDescription .pizzaInfo{
     display: flex;
     min-height: 144px;
     flex-direction: column;
@@ -60,7 +75,7 @@
     padding: 2px;
 }
 
-.productCard .productFullDescription .productInfo .productDescriptionText{
+.pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText{
     display: flex;
     width: 90%;
     max-width: 200px;
@@ -70,7 +85,7 @@
     margin-bottom: 5px;
 }
 
-.productCard .productFullDescription .productInfo .productValue{
+.pizzaCard .pizzaFullDescription .pizzaInfo .pizzaValue{
     display: flex;
     width: 90%;
     align-items: center;
@@ -80,39 +95,39 @@
 }
 
 @media (max-width: 480px){
-    .productCard{
+    .pizzaCard{
         min-height: 200px;
         min-width: 300px;
     }
-    .productCard .productFullDescription{flex-direction: column;}
-    .productCard .productFullDescription .productImage{width: 70%;}
-    .productCard .productFullDescription .productInfo{width: 100%;}
-    .productCard .productFullDescription .productInfo .productDescriptionText{min-width: 90%;}
+    .pizzaCard .pizzaFullDescription{flex-direction: column;}
+    .pizzaCard .pizzaFullDescription .pizzaImage{width: 70%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo{width: 100%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText{min-width: 90%;}
 }
 @media (min-width: 481px) and (max-width: 769px){
-    .productCard{
+    .pizzaCard{
         min-height: 250px;
         min-width: 400px;
     }
-    .productCard .productFullDescription .productImage{width: 40%;}
-    .productCard .productFullDescription .productInfo{width: 60%;}
-    .productCard .productFullDescription .productInfo .productDescriptionText{min-width: 90%;}
+    .pizzaCard .pizzaFullDescription .pizzaImage{width: 40%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo{width: 60%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText{min-width: 90%;}
 }
 @media (min-width: 770px) and (max-width: 993px){
-    .productCard{
+    .pizzaCard{
         min-height: 300px;
         min-width: 400px;
     }
-    .productCard .productFullDescription .productImage{width: 45%;}
-    .productCard .productFullDescription .productInfo{width: 55%;}
-    .productCard .productFullDescription .productInfo .productDescriptionText{min-width: 93%;}
+    .pizzaCard .pizzaFullDescription .pizzaImage{width: 45%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo{width: 55%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText{min-width: 93%;}
 }
 @media (min-width: 993px){
-    .productCard{
+    .pizzaCard{
         min-height: 300px;
         min-width: 450px;
     }
-    .productCard .productFullDescription .productImage{width: 50%;}
-    .productCard .productFullDescription .productInfo{width: 50%;}
-    .productCard .productFullDescription .productInfo .productDescriptionText{min-width: 95%;}
+    .pizzaCard .pizzaFullDescription .pizzaImage{width: 50%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo{width: 50%;}
+    .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText{min-width: 95%;}
 }

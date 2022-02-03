@@ -12,8 +12,8 @@ export function PizzaCard(props) {
   const sizeIndividual = ()=>{setSize("individual");}
 
   return (
-    <div className="productCard">
-      <div className="productName">
+    <div className="pizzaCard">
+      <div className="pizzaName">
         <h3>{name}</h3>
         <ul className="pizzaSize">
           <button onClick={sizeXL}>XL</button>
@@ -22,18 +22,18 @@ export function PizzaCard(props) {
           <button onClick={sizeIndividual}>Individual</button>
         </ul>
       </div>
-      <div className="productFullDescription">
-        <div className="productImage">
+      <div className="pizzaFullDescription">
+        <div className="pizzaImage">
           <img src={url} alt={"Imagen " + name} />
         </div>
-        <div className="productInfo">
-          <div className="productDescriptionText">
+        <div className="pizzaInfo">
+          <div className="pizzaDescriptionText">
             <h4>...{description}...</h4>
           </div>
-          <div className="productValue">
-            <h3>${size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:"Seleccione el Tamaño"}"</h3>
+          <div className="pizzaValue">
+            <h3>{size==="XL"?"$"+value.XL:size==="Small"?"$"+value.Small:size==="MS"?"$"+value.MS:size==="individual"?"$"+value.individual:"Seleccione el Tamaño"}</h3>
           </div>
-          <div className="productButtons">Botones</div>
+          <div className="pizzaButtons">Botones</div>
         </div>
       </div>
     </div>
