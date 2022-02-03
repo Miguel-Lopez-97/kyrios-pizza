@@ -1,6 +1,6 @@
 export const Hotdogs = JSON.parse(`{
     "id":2,
-    "name":"Perros Calientes",
+    "name":"PERROS CALIENTES",
     "url":"https://www.mycolombianrecipes.com/wp-content/uploads/2009/07/perritos-colombianos.jpg",
     "products":[
         {"id":201,
