@@ -82,6 +82,7 @@
     overflow-wrap: break-word;
     align-items: center;
     text-align: center;
+    justify-content: center;
     margin-bottom: 5px;
 }
 
