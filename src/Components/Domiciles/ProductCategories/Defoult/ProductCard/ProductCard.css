@@ -7,6 +7,7 @@
     justify-content: space-evenly;
     height: auto;
     padding: 5px;
+    margin-bottom: 2vh;
     min-height: 200px;
     min-width: 300px;
     background-color: var(--colorDivInfo);
@@ -22,7 +23,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
-    border: solid 2px black;
 }
 .productCard .productFullDescription{
     display: flex;
@@ -30,7 +30,6 @@
     margin-bottom: 5px;
     width: 90%;
     min-height: 160px;
-    border: solid 2px black;
     justify-content: space-between;
 }
 
@@ -40,7 +39,6 @@
     justify-content: center;
     width: 40%;
     height: auto;
-    border: solid 2px black;
 }
 
 .productCard .productFullDescription .productImage img{
@@ -62,7 +60,6 @@
     justify-content: space-between;
     width: 55%;
     padding: 2px;
-    border: solid 2px black;
 }
 
 .productCard .productFullDescription .productInfo .productDescriptionText{
@@ -71,9 +68,8 @@
     max-width: 200px;
     overflow-wrap: break-word;
     align-items: center;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 5px;
-    border: solid 2px black;
 }
 
 .productCard .productFullDescription .productInfo .productValue{
@@ -83,4 +79,11 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 5px;
+}
+
+@media (max-width: 480px){
+    .productCard .productFullDescription{flex-direction: column;}
+    .productCard .productFullDescription .productImage{width: 70%;}
+    .productCard .productFullDescription .productInfo{width: 100%;}
+    .productCard .productFullDescription .productInfo .productDescriptionText{min-width: 90%;}
 }

@@ -1,22 +1,24 @@
 import React from "react";
 import "./ProductCard.css";
 
-export function ProductCard() {
+export function ProductCard(props) {
+  const {name, url, description, value}=props;
+
   return (
     <div className="productCard">
       <div className="productName">
-          <h3>Nombre</h3>
+          <h3>{name}</h3>
       </div>
       <div className="productFullDescription">
         <div className="productImage">
-            <img src="https://www.mycolombianrecipes.com/wp-content/uploads/2009/07/perritos-colombianos.jpg" alt="Imagen" />
+            <img src={url} alt={"Imagen "+name} />
         </div>
         <div className="productInfo">
           <div className="productDescriptionText">
-              <h4>..Description..</h4>
+              <h4>...{description}...</h4>
           </div>
           <div className="productValue">
-              <h3>Value</h3>
+              <h3>${value}"</h3>
           </div>
           <div className="productButtons">
               Botones
