@@ -18,14 +18,14 @@ ReactDOM.render(
           <Route path="/" element={<Home/>} />
           <Route path="/domiciles" element={<Domiciles/>}>
             <Route path="/domiciles" element={<Unselect/>}/>
-            <Route path="/domiciles/pizzas" element={<CategoryPizza json={Categories[0]}/>}/>
+          </Route>
+          <Route path="/domiciles/pizzas" element={<CategoryPizza json={Categories[0]}/>}/>
             <Route path="/domiciles/hotdogs" element={<DefaultCategory json={Categories[1]}/>}/>
             <Route path="/domiciles/burgers" element={<DefaultCategory json={Categories[2]}/>}/>
             <Route path="/domiciles/salchipapas" element={<DefaultCategory json={Categories[3]}/>}/>
             <Route path="/domiciles/patacones&others" element={<DefaultCategory json={Categories[4]}/>}/>
             <Route path="/domiciles/drinks&others" element={<DefaultCategory json={Categories[5]}/>}/>
             <Route path="/domiciles/shopping_card" element={<h1>Carrito de Compra</h1>} />
-          </Route>
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
       </Routes>

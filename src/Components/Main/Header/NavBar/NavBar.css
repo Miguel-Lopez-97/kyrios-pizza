@@ -1,7 +1,7 @@
 .NavBar {
   display: flex;
   justify-content: space-around;
-  width: 99vw;
+  width: 100vw;
 }
 .NavBar a {
   align-items: center;

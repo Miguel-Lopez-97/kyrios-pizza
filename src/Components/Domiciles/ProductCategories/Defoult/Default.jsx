@@ -1,6 +1,7 @@
 import React from "react";
 import './Default.css'
 import { ProductCard } from "./ProductCard/ProductCard";
+import { Link } from "react-router-dom";
 
 export function DefaultCategory(props){
 
@@ -24,6 +25,7 @@ export function DefaultCategory(props){
                     )
                 })}
             </div>
+            <Link to="/domiciles">Regresar al Menú</Link>
         </section>
     );
 }

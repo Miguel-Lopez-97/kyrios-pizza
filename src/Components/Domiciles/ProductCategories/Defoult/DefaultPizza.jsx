@@ -3,6 +3,7 @@ import './Default.css'
 import { ProductCard } from "./ProductCard/ProductCard";
 import { Pizza } from "./PizzaCategory/Pizza";
 import { PizzaCard } from "./PizzaCategory/PizzaCard/PizzaCard";
+import { Link } from "react-router-dom";
 
 export function CategoryPizza(props){
 
@@ -39,6 +40,7 @@ export function CategoryPizza(props){
                     )
                 })}
             </div>
+            <Link to="/domiciles">Regresar al Menú</Link>
         </section>
     );
 }

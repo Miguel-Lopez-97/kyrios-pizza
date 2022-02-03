@@ -5,8 +5,8 @@ export function ButtonCard(){
 
     const [amount, setAmount] = useState(0);
 
-    const addAmount = ()=>{ setAmount(amount+1)}
-    const lessAmount = ()=>{ setAmount(amount-1)}
+    const addAmount = ()=>{setAmount(amount+1)}
+    const lessAmount = ()=>{setAmount(amount-1)}
 
 
     return(

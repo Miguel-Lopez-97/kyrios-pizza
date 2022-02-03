@@ -4,8 +4,13 @@
       color: var(--colorNavWhite);
       display: flex;
       font-family: 'Open Sans', sans-serif;;
-      height: 15vh;
+      height: auto;
       justify-content: center;
       text-align: center;
       width: 100vw;
+      font-size: 2vw;
+  }
+
+  @media (max-width: 480px){
+    .unselectCategory{ font-size: 2vh;}
   }

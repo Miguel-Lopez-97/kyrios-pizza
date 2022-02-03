@@ -6,6 +6,7 @@ import { NavegationMenu } from "./NavigationMenu/NavigationMenu";
 export function Domiciles() {
   return (
     <div className="containerDomiciles">
+      <Outlet />
       <section className="domicilesMenu">
         <div className="logoDomiciles">
           <img
@@ -17,7 +18,6 @@ export function Domiciles() {
           <NavegationMenu />
         </div>
       </section>
-      <Outlet />
     </div>
   );
 }

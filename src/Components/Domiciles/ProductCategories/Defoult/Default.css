@@ -5,15 +5,28 @@ section.categorySection{
     justify-content: center;
     width: 100vw;
     margin-bottom: 5vh;
+    background: linear-gradient(var(--colorYellow) 10%, var(--colorOrange) 90%);
+}
+section.categorySection a{
+    color: var(--colorNavWhite);
+    display: flex;
+    background-color: var(--colorRed);
+    padding: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
+section.categorySection a:hover{
+    background-color: var(--colorOldRed);
+}
 section.categorySection .selectCategory{
     align-items:center;
     background-color: var(--colorRed);
+    border: solid 5px var(--colorOldRed);
     color: var(--colorNavWhite);
     display: flex;
     font-family: 'Open Sans', sans-serif;;
-    height: 20vh;
+    height: auto;
     padding: 2vh;
     justify-content: center;
     text-align: center;
@@ -26,8 +39,8 @@ section.categorySection .selectCategory img{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    height: 19vh;
-    width: 19vh;
+    height: 10vh;
+    width: 10vh;
     margin-right: 5vw;
 }
 
