@@ -8,7 +8,7 @@ export function NavBar(){
         <ul className="NavBar">
             <Link to="/">KYRIO'S</Link>
             <Link to="/domiciles">DOMICILIOS</Link>
-            <Link to="/shopping_card"><img src="https://drive.google.com/uc?export=download&id=12YfuFGlX0FAzlaPFK5FuGXzAsPd-5v_H" alt="ICO"/></Link>
+            <Link to="/domiciles/shopping_card"><img src="https://drive.google.com/uc?export=download&id=12YfuFGlX0FAzlaPFK5FuGXzAsPd-5v_H" alt="ICO"/></Link>
         </ul>
     );
 }

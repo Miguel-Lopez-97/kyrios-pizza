@@ -24,8 +24,8 @@ ReactDOM.render(
             <Route path="/domiciles/salchipapas" element={<DefaultCategory json={Categories[3]}/>}/>
             <Route path="/domiciles/patacones&others" element={<DefaultCategory json={Categories[4]}/>}/>
             <Route path="/domiciles/drinks&others" element={<DefaultCategory json={Categories[5]}/>}/>
+            <Route path="/domiciles/shopping_card" element={<h1>Carrito de Compra</h1>} />
           </Route>
-          <Route path="/shopping_card" element={<h1>Carrito de Compra</h1>} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
       </Routes>
