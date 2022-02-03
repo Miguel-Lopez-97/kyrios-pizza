@@ -34,7 +34,7 @@ export function PizzaCard(props) {
           <div className="pizzaValue">
             <h3>{size==="XL"?"$"+value.XL:size==="Small"?"$"+value.Small:size==="MS"?"$"+value.MS:size==="individual"?"$"+value.individual:"Seleccione el Tamaño"}</h3>
           </div>
-          <div className="pizzaButtons"><ButtonCard/></div>
+          {size===""?null:<div className="pizzaButtons"><ButtonCard/></div>}
         </div>
       </div>
     </div>
