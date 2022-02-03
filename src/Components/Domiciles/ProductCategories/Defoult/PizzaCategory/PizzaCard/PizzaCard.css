@@ -36,7 +36,13 @@
     min-width: 25px;
     background-color: var(--colorOldRed);
     color: var(--colorNavWhite);
+    font-size: 1rem;
 }
+
+.pizzaCard .pizzaSize button:hover{
+    background-color: var(--colorRed);
+}
+
 .pizzaCard .pizzaFullDescription{
     display: flex;
     align-items: center;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductCard.css";
+import { ButtonCard } from "../ButtonsCard/ButtonCard";
 
 export function ProductCard(props) {
   const {name, url, description, value}=props;
@@ -21,7 +22,7 @@ export function ProductCard(props) {
               <h3>${value}"</h3>
           </div>
           <div className="productButtons">
-              Botones
+              <ButtonCard/>
           </div>
         </div>
       </div>
