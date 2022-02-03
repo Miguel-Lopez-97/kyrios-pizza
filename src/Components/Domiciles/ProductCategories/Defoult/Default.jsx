@@ -1,7 +1,6 @@
 import React from "react";
 import './Default.css'
 import { ProductCard } from "./ProductCard/ProductCard";
-import { Pizza } from "./Pizza/Pizza";
 
 export function DefaultCategory(props){
 
@@ -13,7 +12,6 @@ export function DefaultCategory(props){
                 <img src={json.url} alt={"imagen de "+json.name}/>
                 <h2>{json.name}</h2>
             </div>
-            {json.name==="PIZZAS"?<Pizza/>:null}
             <div className="productsList">
                 {json.products.map((product) =>{
                     return(

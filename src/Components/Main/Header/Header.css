@@ -1,4 +1,9 @@
 header{
+    position: absolute;
+    background-color: var(--colorRed);
+}
+
+.headerFloat{
     position: fixed;
     z-index: 2;
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import './Default.css'
 import { ProductCard } from "./ProductCard/ProductCard";
-import { Pizza } from "./Pizza/Pizza";
+import { Pizza } from "./PizzaCategory/Pizza";
+import { PizzaCard } from "./PizzaCategory/PizzaCard/PizzaCard";
 
 export function CategoryPizza(props){
 
@@ -14,6 +15,18 @@ export function CategoryPizza(props){
                 <h2>{json.name}</h2>
             </div>
             <Pizza/>
+            <div className="productsList">
+                {json.pizzas.map((product) =>{
+                    return(
+                            <PizzaCard
+                            key={product.id}
+                            name={product.name}
+                            url={product.url}
+                            description={product.description}
+                            value={product.value}/>
+                    )
+                })}
+            </div>
             <div className="productsList">
                 {json.products.map((product) =>{
                     return(

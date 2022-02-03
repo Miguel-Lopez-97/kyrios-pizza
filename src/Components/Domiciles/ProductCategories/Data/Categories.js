@@ -5,4 +5,4 @@ import { Salchipapas } from "./Salchipapas";
 import { PataconesOthers} from "./Patacones_Others";
 import { Pizzas } from "./Pizzas";
 
-export var Categories = [Pizzas, Hotdogs, Burgers, Salchipapas, PataconesOthers, DrinksOthers];
+export const Categories = [Pizzas, Hotdogs, Burgers, Salchipapas, PataconesOthers, DrinksOthers];
