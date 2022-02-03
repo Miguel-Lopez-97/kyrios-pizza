@@ -119,5 +119,16 @@ export const Pizzas = JSON.parse(`{
 				"MS":22000,
 				"individual":5000
 			}}
+			,
+			 {"id":100,
+         	"name":"Personalizada",
+         	"url":"",
+         	"description":"Seleccione el tamaño de la pizza que quiere compartir, esta puede tener dos sabores distintos en su preparación, no olvide aclarar en el carrito de compras estos 2 sabores",
+         	"value":{
+				"XL":40000,
+				"Small":32000,
+				"MS":22000,
+				"individual":null
+			}}
 	]
 }`)
