@@ -19,7 +19,9 @@ ReactDOM.render(
           <Route path="/" element={<Home />} />
           <Route path="/domiciles" element={<Domiciles />}>
             <Route path="/domiciles" element={<Unselect />} />
-            <Route
+          </Route>
+
+          <Route
               path="/domiciles/pizzas"
               element={<CategoryPizza json={Categories[0]} />}
             />
@@ -43,7 +45,6 @@ ReactDOM.render(
               path="/domiciles/drinks&others"
               element={<DefaultCategory json={Categories[5]} />}
             />
-          </Route>
 
           <Route
             path="/domiciles/shopping_card"
