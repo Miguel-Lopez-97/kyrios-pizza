@@ -3,7 +3,7 @@ import { TYPES } from "./ShoppingActions"
 
 export const shoppingInitialState = {
     products: Categories,
-    cart:[{"id":301, "amount":2}]
+    cart:[{"id":301, "amount":2, "value":12000}, {"id":102, "amount":10, "value":40000}, {"id":112, "amount":5, "value":9000}]
 }
 
 export function shoppingReducer(state, action){

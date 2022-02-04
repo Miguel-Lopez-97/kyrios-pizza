@@ -1,10 +1,10 @@
 import React from "react";
 import "./ProductCardInCart.css";
-import { ButtonCard } from "../../Domiciles/ProductCategories/Defoult/ButtonsCard/ButtonCard";
+import { ButtonCardCart } from "./ButtonsCardCart/ButtonCardCart";
 
 export function ProductCardInCart(props) {
-  const {data, amount}=props;
-  let {name, url, description, value}=data;
+  const {data, amount, value}=props;
+  let {name, url, description}=data;
 
   return (
     <div className="productCardInCart">
@@ -23,7 +23,7 @@ export function ProductCardInCart(props) {
               <h3>${value}"</h3>
           </div>
           <div className="productButtons">
-              <ButtonCard amount={amount}/>
+              <ButtonCardCart amount={amount} value={value}/>
           </div>
         </div>
       </div>
