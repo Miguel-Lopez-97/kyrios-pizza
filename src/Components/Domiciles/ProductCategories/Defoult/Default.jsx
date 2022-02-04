@@ -18,7 +18,8 @@ export function DefaultCategory(props){
                     return(
                         <ProductCard
                             key={product.id}
-                            data={product}/>
+                            data={product}
+                            amount={0}/>
                     )
                 })}
             </div>

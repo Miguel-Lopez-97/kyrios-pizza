@@ -1,13 +1,13 @@
 import React from "react";
-import "./ProductCard.css";
-import { ButtonCard } from "../ButtonsCard/ButtonCard";
+import "./ProductCardInCart.css";
+import { ButtonCard } from "../../Domiciles/ProductCategories/Defoult/ButtonsCard/ButtonCard";
 
-export function ProductCard(props) {
+export function ProductCardInCart(props) {
   const {data, amount}=props;
   let {name, url, description, value}=data;
 
   return (
-    <div className="productCard">
+    <div className="productCardInCart">
       <div className="productName">
           <h3>{name}</h3>
       </div>

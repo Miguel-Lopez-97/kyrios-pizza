@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { shoppingInitialState, shoppingReducer } from "./ShippingReducer";
 import './ShoppingCart.css'
-import { ProductCard } from "../Domiciles/ProductCategories/Defoult/ProductCard/ProductCard";
+import { ProductCardInCart } from "./ProductCardInCart/ProductCardInCart";
 import { TYPES } from "./ShoppingActions";
 import { Categories } from "../Domiciles/ProductCategories/Data/Categories";
 
@@ -29,7 +29,7 @@ const clearCart = () =>{
             <h3>Carrito</h3>
             <button onClick={clearCart}>Limpiar Carrito de Compras</button>
             
-            {cart.map((item) => <ProductCard key={item.id} amount={item.amount}data={Categories[Math.floor(item.id/100)-1].products.find(e => e.id ===item.id)}/>
+            {cart.map((item) => <ProductCardInCart key={item.id} amount={item.amount} data={Categories[Math.floor(item.id/100)-1].products.find(e => e.id ===item.id)}/>
                         )}
         </article>
         </>
