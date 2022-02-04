@@ -3,7 +3,8 @@ import "./PizzaCard.css";
 import { ButtonCard } from "../../ButtonsCard/ButtonCard";
 
 export function PizzaCard(props) {
-  const { name, url, description, value } = props;
+  const { data } = props;
+  let {name, url, description, value} = data;
 
   const [size, setSize] = useState("");
 

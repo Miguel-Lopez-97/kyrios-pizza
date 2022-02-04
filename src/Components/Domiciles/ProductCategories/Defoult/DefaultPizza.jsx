@@ -21,10 +21,7 @@ export function CategoryPizza(props){
                     return(
                             <PizzaCard
                             key={product.id}
-                            name={product.name}
-                            url={product.url}
-                            description={product.description}
-                            value={product.value}/>
+                            data={product}/>
                     )
                 })}
             </div>
@@ -33,10 +30,7 @@ export function CategoryPizza(props){
                     return(
                         <ProductCard
                             key={product.id}
-                            name={product.name}
-                            url={product.url}
-                            description={product.description}
-                            value={product.value}/>
+                            data={product}/>
                     )
                 })}
             </div>

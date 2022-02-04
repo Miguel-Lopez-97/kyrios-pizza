@@ -3,7 +3,8 @@ import "./ProductCard.css";
 import { ButtonCard } from "../ButtonsCard/ButtonCard";
 
 export function ProductCard(props) {
-  const {name, url, description, value}=props;
+  const {data}=props;
+  let {name, url, description, value}=data;
 
   return (
     <div className="productCard">
