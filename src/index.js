@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { Provider } from "react-redux";
+import { store } from "./Components/Redux/store";
 import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import { Main } from "./Components/Main/Main";
 import { Home } from "./Components/Home/Home";
@@ -13,6 +15,7 @@ import { Categories } from "./Components/Domiciles/ProductCategories/Data/Catego
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <HashRouter>
       <Routes>
         <Route path="/" element={<Main />}>
@@ -54,6 +57,7 @@ ReactDOM.render(
         </Route>
       </Routes>
     </HashRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
