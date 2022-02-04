@@ -3,6 +3,7 @@ import { shoppingInitialState, shoppingReducer } from "./ShippingReducer";
 import './ShoppingCart.css'
 import { ProductCard } from "../Domiciles/ProductCategories/Defoult/ProductCard/ProductCard";
 import { TYPES } from "./ShoppingActions";
+import { Categories } from "../Domiciles/ProductCategories/Data/Categories";
 
 export function ShoppingCart(){
 
@@ -28,13 +29,8 @@ const clearCart = () =>{
             <h3>Carrito</h3>
             <button onClick={clearCart}>Limpiar Carrito de Compras</button>
             
-            {cart.map((product) => 
-                {<ProductCard key={product.id} data={product}/>
-                    /* <div key={"div"+product.id}>
-                    <button key={"button1"+product.id} onClick={()=>dellFromCart(product.id, true)}>Eliminar Todos</button>
-                    <button key={"button2"+product.id} onClick={()=>dellFromCart(product.id)}>Eliminar Uno</button>
-                    <ProductCard key={product.id} data={product} modificationCart={dellFromCart}/>
-                </div> */})}
+            {cart.map((item) => <ProductCard key={item.id} amount={item.amount}data={Categories[Math.floor(item.id/100)-1].products.find(e => e.id ===item.id)}/>
+                        )}
         </article>
         </>
     );

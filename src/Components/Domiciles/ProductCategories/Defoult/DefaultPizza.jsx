@@ -17,18 +17,14 @@ export function CategoryPizza(props){
             </div>
             <Pizza/>
             <div className="productsList">
-                {json.pizzas.map((product) =>{
-                    return(
+                {json.products.map((product) =>{
+                    return( product.id<110
+                            ?
                             <PizzaCard
                             key={product.id}
                             data={product}/>
-                    )
-                })}
-            </div>
-            <div className="productsList">
-                {json.products.map((product) =>{
-                    return(
-                        <ProductCard
+                            :
+                            <ProductCard
                             key={product.id}
                             data={product}/>
                     )
