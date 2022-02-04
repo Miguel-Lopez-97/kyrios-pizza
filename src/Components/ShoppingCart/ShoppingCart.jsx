@@ -1,9 +1,10 @@
 import React from "react";
 import './ShoppingCart.css'
 import { ProductCardInCart } from "./ProductCardInCart/ProductCardInCart";
-import { Categories } from "../Domiciles/ProductCategories/Data/Categories";
+import { AllProducts } from "../Domiciles/ProductCategories/Data/Categories";
 
 export function ShoppingCart(){
+    
     const cart=[{"id":301, "amount":2, "value":12000}, {"id":102, "amount":10, "value":40000}, {"id":112, "amount":5, "value":9000}];
 
     return(
@@ -14,8 +15,7 @@ export function ShoppingCart(){
             <h3>Carrito</h3>
             <button>Limpiar Carrito de Compras</button>
             
-            {cart.map((item) => <ProductCardInCart key={item.id} amount={item.amount} value={item.value} data={Categories[Math.floor(item.id/100)-1].products.find(e => e.id ===item.id)}/>
-                        )}
+            {cart.map((item) => <ProductCardInCart key={item.id} amount={item.amount} value={item.value} data={AllProducts.find(e => e.id === item.id)}/>)}
         </article>
         </>
     );
