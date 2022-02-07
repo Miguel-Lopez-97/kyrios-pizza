@@ -3,7 +3,7 @@ import "./ProductCard.css";
 import { ButtonCard } from "../ButtonsCard/ButtonCard";
 
 export function ProductCard(props) {
-  const {data, amount}=props;
+  const {data, amount, id}=props;
   let {name, url, description, value}=data;
 
   return (
@@ -23,7 +23,9 @@ export function ProductCard(props) {
               <h3>${value}"</h3>
           </div>
           <div className="productButtons">
-              <ButtonCard amount={amount}/>
+              <ButtonCard 
+              amount={amount}
+              id={id}/>
           </div>
         </div>
       </div>

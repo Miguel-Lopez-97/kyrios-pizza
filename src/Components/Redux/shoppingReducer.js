@@ -1,9 +1,9 @@
 import { AllProducts} from "../Domiciles/ProductCategories/Data/Categories";
-import {ADD_TO_CART, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FORM_CART} from "./types"
+import {ADD_TO_CART, ADD_TO_CART_MENU, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FORM_CART} from "./types"
 
 export const initialState ={
     products: AllProducts,
-    cart:[{"id":301, "quantity":2, "value":12000}, {"id":102, "quantity":10, "value":40000}, {"id":112, "quantity":5, "value":9000}]
+    cart:[]
 };
 
 export function shoppingReducer(state = initialState, action){
@@ -22,6 +22,23 @@ export function shoppingReducer(state = initialState, action){
                             :{
                             ...state,
                             cart:[...state.cart, {...newItem, quantity:1}]
+                            }
+            );
+        };
+
+        case ADD_TO_CART_MENU: {
+            let newItem = state.products.find((product) => product.id === action.payload1);
+            let quantityItem = action.payload2;
+            let itemInCart = state.cart.find((item) => item.id === newItem.id);
+
+            return(
+                itemInCart?{...state,
+                                cart: state.cart.map((item) => item.id === newItem.id
+                                ?{...item, quantity: item.quantity+quantityItem}
+                                :item)}
+                            :{
+                            ...state,
+                            cart:[...state.cart, {...newItem, quantity:quantityItem}]
                             }
             );
         };
