@@ -3,13 +3,14 @@ import "./ProductCardInCart.css";
 import { ButtonCardCart } from "./ButtonsCardCart/ButtonCardCart";
 
 export function ProductCardInCart(props) {
-  const {data, quantity, id, addToCart, dellOneFromCart, dellAllFromCart}=props;
-  let {name, url, description, value}=data;
-
+  const {value, data, quantity, id, addToCart, dellOneFromCart, dellAllFromCart, size}=props;
+  let {name, url, description}=data;
+  console.log(value)
+  
   return (
     <div className="productCardInCart">
       <div className="productName">
-          <h3>{name}</h3>
+          <h3>{size?name+" - "+size:name}</h3>
           <button onClick={()=>dellAllFromCart(id, true)}>Eliminar del Carrito</button>
       </div>
       <div className="productFullDescription">
@@ -21,12 +22,12 @@ export function ProductCardInCart(props) {
               <h4>...{description}...</h4>
           </div>
           <div className="productValue">
-              <h3>${value}"</h3>
+              <h3>${size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}"</h3>
           </div>
           <div className="productButtons">
               <ButtonCardCart 
               quantity={quantity}
-              value={value}
+              value={size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}
               id={id}
               addToCart={addToCart}
               dellOneFromCart={dellOneFromCart}/>

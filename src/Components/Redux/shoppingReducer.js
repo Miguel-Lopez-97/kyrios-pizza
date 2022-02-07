@@ -18,7 +18,7 @@ export function shoppingReducer(state = initialState, action){
                 :item)});
 
         case ADD_TO_CART_MENU: {
-            let newItem = {id:action.payload1};
+            let newItem = {id:action.payload1, dataID:action.payload1};
             let quantityItem = action.payload2;
             let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
@@ -35,9 +35,8 @@ export function shoppingReducer(state = initialState, action){
         };
         
         case ADD_TO_CART_PIZZA: {
-            let newItem = state.products.find((product) => product.id === action.payload1);
+            let newItem = {id:action.payload1+action.payload3, dataID:action.payload1, size:action.payload3};
             let quantityItem = action.payload2;
-            let valueItem = newItem.value.find(item => item===action.payload3);
             let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
             return(
@@ -47,7 +46,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem, value:valueItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem}]
                             }
             );
         };

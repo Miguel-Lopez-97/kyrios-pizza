@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./PizzaCard.css";
-import { ButtonCard } from "../../ButtonsCard/ButtonCard";
+import { ButtonCardPizza } from "../../ButtonsCard/ButtonCardPizza";
 
 export function PizzaCard(props) {
-  const { data, amount } = props;
+  const { data, amount, id } = props;
   let {name, url, description, value} = data;
 
   const [size, setSize] = useState("");
@@ -35,7 +35,7 @@ export function PizzaCard(props) {
           <div className="pizzaValue">
             <h3>{size==="XL"?"$"+value.XL:size==="Small"?"$"+value.Small:size==="MS"?"$"+value.MS:size==="individual"?"$"+value.individual:"Seleccione el Tamaño"}</h3>
           </div>
-          {size===""?null:<div className="pizzaButtons"><ButtonCard amount={amount}/></div>}
+          {size===""?null:<div className="pizzaButtons"><ButtonCardPizza amount={amount} id={id} size={size}/></div>}
         </div>
       </div>
     </div>
