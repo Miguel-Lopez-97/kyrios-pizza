@@ -21,7 +21,6 @@ export function ShoppingCart(){
             key={item.id}
             id={item.id}
             quantity={item.quantity}
-            value={item.value}
             data={products.find(e => e.id === item.id)}
             addToCart={() => dispatch(addToCart(item.id))}
             dellOneFromCart={()=> dispatch(dellFromCart(item.id))}

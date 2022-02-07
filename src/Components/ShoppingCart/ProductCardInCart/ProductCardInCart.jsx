@@ -3,8 +3,8 @@ import "./ProductCardInCart.css";
 import { ButtonCardCart } from "./ButtonsCardCart/ButtonCardCart";
 
 export function ProductCardInCart(props) {
-  const {data, quantity, value, id, addToCart, dellOneFromCart, dellAllFromCart}=props;
-  let {name, url, description}=data;
+  const {data, quantity, id, addToCart, dellOneFromCart, dellAllFromCart}=props;
+  let {name, url, description, value}=data;
 
   return (
     <div className="productCardInCart">
