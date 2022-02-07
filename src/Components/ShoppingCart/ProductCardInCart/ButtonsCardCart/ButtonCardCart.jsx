@@ -1,23 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import './ButtonCardCart.css';
 
 export function ButtonCardCart(props){
-    const {amount, value}=props
-
-    const [quantity, setQuantity] = useState(amount);
-
-    const addAmount = ()=>{setQuantity(quantity+1)}
-    const lessAmount = ()=>{setQuantity(quantity-1)}
-    const subtotal = value*quantity;
+    const {quantity, value, id, dellOneFromCart, addToCart}=props
 
     return(
         <>
             <div className="buttonAmountChange">
-                <button onClick={lessAmount} disabled={quantity===0?true:false}>-</button>
+                <button onClick={()=>dellOneFromCart(id)}>-</button>
                 <h3>{quantity}</h3>
-                <button onClick={addAmount}>+</button>
+                <button onClick={()=>addToCart(id)}>+</button>
             </div>
-            <h2>SubTotal = ${subtotal}"</h2>
+            <h2>SubTotal = ${value*quantity}"</h2>
         </>
     );
 

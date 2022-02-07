@@ -1,11 +1,13 @@
 import React from "react";
-import './ShoppingCart.css'
-import { ProductCardInCart } from "./ProductCardInCart/ProductCardInCart";
-import { AllProducts } from "../Domiciles/ProductCategories/Data/Categories";
+import { useDispatch, useSelector } from "react-redux";
+import {ProductCardInCart} from "./ProductCardInCart/ProductCardInCart";
+import { addToCart, dellFromCart, clearCart } from "../Redux/actions";
+import './ShoppingCart.css';
 
 export function ShoppingCart(){
-    
-    const cart=[{"id":301, "amount":2, "value":12000}, {"id":102, "amount":10, "value":40000}, {"id":112, "amount":5, "value":9000}];
+    const state = useSelector(state => state);
+    const dispatch = useDispatch();
+    const {products, cart} = state.shopping;
 
     return(
         <>
@@ -13,9 +15,18 @@ export function ShoppingCart(){
         <h3>Productos</h3>
         <article>
             <h3>Carrito</h3>
-            <button>Limpiar Carrito de Compras</button>
-            
-            {cart.map((item) => <ProductCardInCart key={item.id} amount={item.amount} value={item.value} data={AllProducts.find(e => e.id === item.id)}/>)}
+            <button onClick={()=>dispatch(clearCart())}>Limpiar Carrito de Compras</button>
+            {cart.map((item) => 
+            <ProductCardInCart 
+            key={item.id}
+            id={item.id}
+            quantity={item.quantity}
+            value={item.value}
+            data={products.find(e => e.id === item.id)}
+            addToCart={() => dispatch(addToCart(item.id))}
+            dellOneFromCart={()=> dispatch(dellFromCart(item.id))}
+            dellAllFromCart={()=> dispatch(dellFromCart(item.id, true))}
+            />)}
         </article>
         </>
     );
