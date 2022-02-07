@@ -61,7 +61,7 @@ export function Home() {
         <div className="storyHome">
           <h2>Comidas Rapidas Kyrio's Pizza</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
+            Hola Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
             delectus. Mollitia itaque optio exercitationem ipsum, eos aut
             consectetur perferendis aperiam. Facere nisi amet nobis dignissimos
             cumque, pariatur ipsum et ipsam.
