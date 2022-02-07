@@ -22,11 +22,13 @@ export function CategoryPizza(props){
                             ?
                             <PizzaCard
                             key={product.id}
+                            id={product.id}
                             data={product}
                             amount={0}/>
                             :
                             <ProductCard
                             key={product.id}
+                            id={product.id}
                             data={product}
                             amount={0}/>
                     )
