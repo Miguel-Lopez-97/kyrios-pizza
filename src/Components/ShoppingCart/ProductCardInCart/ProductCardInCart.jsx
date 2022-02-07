@@ -29,7 +29,7 @@ export function ProductCardInCart(props) {
               value={value}
               id={id}
               addToCart={addToCart}
-              dellOneToCart={dellOneFromCart}/>
+              dellOneFromCart={dellOneFromCart}/>
           </div>
         </div>
       </div>

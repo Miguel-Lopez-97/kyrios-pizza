@@ -7,7 +7,7 @@ export function ButtonCardCart(props){
     return(
         <>
             <div className="buttonAmountChange">
-                <button onClick={()=>dellOneFromCart(id)}>-</button>
+                <button onClick={()=>dellOneFromCart(id, false)}>-</button>
                 <h3>{quantity}</h3>
                 <button onClick={()=>addToCart(id)}>+</button>
             </div>
