@@ -60,7 +60,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem , value:priceItem, name:nameItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem , value:priceItem, name:nameItem+"%20-"+size}]
                             }
             );
         };

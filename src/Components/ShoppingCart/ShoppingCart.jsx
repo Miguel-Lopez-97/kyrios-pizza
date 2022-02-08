@@ -17,6 +17,10 @@ export function ShoppingCart() {
   const totalArray = cart.map((item) => (item.quantity*item.value));
   const sum = (previousValue, currentValue) => previousValue + currentValue;
   const total = cart.length > 0 ?totalArray.reduce(sum):null;
+  const productList = 
+        cart.map((item) => ("*"+item.name+"*%20"+"Cantidad:%20"+item.quantity+"%20Subtotal:%20"+
+        item.quantity*item.value+"%0a"
+        ));
 
   return (
     <div className="containerCart">
@@ -63,8 +67,7 @@ export function ShoppingCart() {
         <div className="resultCartText">
           <h2>TOTAL</h2>
           <h4>
-            Recuerde que el valor minimo para realizar el domicilio es de
-            $12.000" (Doce mill pesos)
+            {total<12000?"Recuerde que el valor minimo para realizar el domicilio es de $12.000 (Doce mill pesos)":null}
           </h4>
         </div>
         <div className="resultCartValue">
@@ -73,6 +76,7 @@ export function ShoppingCart() {
       </div>
       <section className="formCart">
         <h2>DATOS DEL PEDIDO</h2>
+        <p>{productList}</p>
         <form>
             <input
               type="text"
