@@ -110,6 +110,10 @@ section.formCart{
     align-items: center;
     margin-top: max(2vh, 15px);
 }
+section.formCart p{
+  width: 500px;
+  word-wrap: break-word;
+}
 section.formCart form{
     display: flex;
     width: 80%;

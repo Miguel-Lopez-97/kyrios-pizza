@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductCardInCart } from "./ProductCardInCart/ProductCardInCart";
 import { addToCart, dellFromCart, clearCart } from "../Redux/actions";
@@ -6,22 +6,35 @@ import "./ShoppingCart.css";
 
 export function ShoppingCart() {
   const state = useSelector((state) => state);
+  const [userName, setUserName] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const [userAddress, setUserAddress] = useState("");
+  const [userMessage, setUserMessage] = useState("");
+
   const dispatch = useDispatch();
   const { products, cart } = state.shopping;
 
-  const alertClear = ()=>
-      {if (window.confirm("¿Desea limpiar el Carrito de Compras?")) {
-        dispatch(clearCart());
-      }};
+  const alertClear = () => {
+    if (window.confirm("¿Desea limpiar el Carrito de Compras?")) {
+      dispatch(clearCart());
+    }
+  };
 
-  const totalArray = cart.map((item) => (item.quantity*item.value));
+  const totalArray = cart.map((item) => (item.quantity * item.value));
   const sum = (previousValue, currentValue) => previousValue + currentValue;
-  const total = cart.length > 0 ?totalArray.reduce(sum):null;
-  const productList = 
-        cart.map((item) => ("*"+item.name+"*%20"+"Cantidad:%20"+item.quantity+"%20Subtotal:%20"+
-        item.quantity*item.value+"%0a"
-        ));
+  const total = cart.length > 0 ? totalArray.reduce(sum) : null;
+  const productList =
+    cart.map((item) => ("%0a*" + item.name + "*%20" + "Cantidad:%20" + item.quantity + "%20Subtotal:%20" +
+      item.quantity * item.value + "%20"
+    ));
+  const apiMessage = "Hola%20KYRIO's,%0ami%20Nombre%20es:%20*" + userName + "*%0ami%20Número%20de%20celular%20es:%20*" + userPhone + "*%0aMi%20pedido%20es:%0a" + productList + "%0a%0aPara%20un%20Total%20de:%0a*" + total + "*%0a%0aMi%20Dirección%20es:%20*" + userAddress + "*%0aMensaje%20adicional:%0a_Por favor%20"+userMessage+"_%0a*Gracias*"
+  const phoneNumber = 3192171931;
+  const urlApiWhatsApp = "https://api.whatsapp.com/send?phone=57"+phoneNumber+"&text="+apiMessage
 
+
+  const handleSent = event => {
+    event.preventDefault()
+  };
   return (
     <div className="containerCart">
       <div className="infoCart">
@@ -67,41 +80,49 @@ export function ShoppingCart() {
         <div className="resultCartText">
           <h2>TOTAL</h2>
           <h4>
-            {total<12000?"Recuerde que el valor minimo para realizar el domicilio es de $12.000 (Doce mill pesos)":null}
+            {total < 12000 ? "Recuerde que el valor minimo para realizar el domicilio es de $12.000 (Doce mill pesos)" : null}
           </h4>
         </div>
         <div className="resultCartValue">
-          <h3>${cart.length > 0 ?total:"Valor Total"}"</h3>
+          <h3>${cart.length > 0 ? total : "Valor Total"}"</h3>
         </div>
       </div>
       <section className="formCart">
         <h2>DATOS DEL PEDIDO</h2>
-        <p>{productList}</p>
-        <form>
-            <input
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Ingrese su Nombre"
-            />
-            <input
-              type="text"
-              id="cel"
-              name="user_cel"
-              placeholder="Ingrese su Número de Celular"
-            />
-            <input
-              type="text"
-              id="address"
-              name="user_text"
-              placeholder="Ingrese su Direccón"
-            />
-            <input
-              type="text"
-              id="message"
-              name="user_message"
-              placeholder="Mensaje Adicional para su pedido, selección de saboreso especificaciones, ejemplo sabores de bebidas o de pizza personalizada, Hamburgesa sin salsas y cebolla, etc..."
-            />
+        <p>{urlApiWhatsApp}</p>
+        <form onSubmit={handleSent}>
+          <input
+            type="text"
+            id="name"
+            name="user_name"
+            placeholder="Ingrese su Nombre"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <input
+            type="text"
+            id="cel"
+            name="user_cel"
+            placeholder="Ingrese su Número de Celular"
+            value={userPhone}
+            onChange={(e) => setUserPhone(e.target.value)}
+          />
+          <input
+            type="text"
+            id="address"
+            name="user_text"
+            placeholder="Ingrese su Direccón"
+            value={userAddress}
+            onChange={(e) => setUserAddress(e.target.value)}
+          />
+          <input
+            type="text"
+            id="message"
+            name="user_message"
+            placeholder="Mensaje Adicional para su pedido, selección de saboreso especificaciones, ejemplo sabores de bebidas o de pizza personalizada, Hamburgesa sin salsas y cebolla, etc..."
+            value={userMessage}
+            onChange={(e) => setUserMessage(e.target.value)}
+          />
           <input type="submit" id="submit" value="Enviar" />
         </form>
       </section>
