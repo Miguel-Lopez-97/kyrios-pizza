@@ -14,6 +14,10 @@ export function ShoppingCart() {
         dispatch(clearCart());
       }};
 
+  const totalArray = cart.map((item) => (item.quantity*item.value));
+  const sum = (previousValue, currentValue) => previousValue + currentValue;
+  const total = cart.length > 0 ?totalArray.reduce(sum):null;
+
   return (
     <div className="containerCart">
       <div className="infoCart">
@@ -64,7 +68,7 @@ export function ShoppingCart() {
           </h4>
         </div>
         <div className="resultCartValue">
-          <h3>$ Valor Total</h3>
+          <h3>${cart.length > 0 ?total:"Valor Total"}"</h3>
         </div>
       </div>
       <section className="formCart">
