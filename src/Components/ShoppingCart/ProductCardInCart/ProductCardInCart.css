@@ -17,10 +17,29 @@
 
 .productCardInCart .productName{
     display: flex;
+    min-width: 90%;
     height: auto;
+    padding: 10px 0;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 5px;}
+
+.productCardInCart .productName h3{
+    text-align: center;
+    width: 90%;
+    }
+.productCardInCart .productName button.productClearProduct{
+    background-color: var(--colorOldRed);
+    display: flex;
+    color: var(--colorNavWhite);
+    padding: 5px;
+    justify-self: right;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    align-self: flex-start;
 }
 .productCardInCart .productFullDescription{
     display: flex;
@@ -77,6 +96,13 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 5px;
+}
+
+.productCardInCart .productButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 480px){

@@ -9,6 +9,11 @@ export function ShoppingCart() {
   const dispatch = useDispatch();
   const { products, cart } = state.shopping;
 
+  const alertClear = ()=>
+      {if (window.confirm("¿Desea limpiar el Carrito de Compras?")) {
+        dispatch(clearCart());
+      }};
+
   return (
     <div className="containerCart">
       <div className="infoCart">
@@ -29,7 +34,7 @@ export function ShoppingCart() {
       </div>
       <article className="productsCart">
         {cart.length > 0 ? (
-          <button className="clearCart" onClick={() => dispatch(clearCart())}>
+          <button className="clearCart" onClick={alertClear}>
             Limpiar Carrito de Compras
           </button>
         ) : null}

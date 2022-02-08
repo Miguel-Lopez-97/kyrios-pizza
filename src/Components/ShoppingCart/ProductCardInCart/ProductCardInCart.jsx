@@ -6,11 +6,18 @@ export function ProductCardInCart(props) {
   const {value, data, quantity, id, addToCart, dellOneFromCart, dellAllFromCart, size}=props;
   let {name, url, description}=data;
   
+  const clearItem = ()=>dellAllFromCart(id, true);
+
+  const alertClear = ()=>
+      {if (window.confirm("¿Desea eliminar este Item del Carrito de Compras?")) {
+        clearItem();
+      }};
+
   return (
     <div className="productCardInCart">
       <div className="productName">
           <h3>{size?name+" - "+size:name}</h3>
-          <button onClick={()=>dellAllFromCart(id, true)}>Eliminar del Carrito</button>
+          <button className="productClearProduct" onClick={alertClear}>X</button>
       </div>
       <div className="productFullDescription">
         <div className="productImage">
@@ -23,7 +30,9 @@ export function ProductCardInCart(props) {
           <div className="productValue">
               <h3>${size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}"</h3>
           </div>
-          <div className="productButtons">
+        </div>
+      </div>
+      <div className="productButtons">
               <ButtonCardCart 
               quantity={quantity}
               value={size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}
@@ -31,8 +40,6 @@ export function ProductCardInCart(props) {
               addToCart={addToCart}
               dellOneFromCart={dellOneFromCart}/>
           </div>
-        </div>
-      </div>
     </div>
   );
 }
