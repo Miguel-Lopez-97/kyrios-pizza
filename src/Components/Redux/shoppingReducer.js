@@ -20,6 +20,7 @@ export function shoppingReducer(state = initialState, action){
         case ADD_TO_CART_MENU: {
             let newItem = {id:action.payload1, dataID:action.payload1};
             let quantityItem = action.payload2;
+            let nameItem = state.products.find((e) => e.id === action.payload1).name;
             let priceItem = state.products.find((e) => e.id === action.payload1).value;
             let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
@@ -30,7 +31,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem, value:priceItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem, value:priceItem, name:nameItem}]
                             }
             );
         };
@@ -39,6 +40,7 @@ export function shoppingReducer(state = initialState, action){
             let newItem = {id:action.payload1+action.payload3, dataID:action.payload1, size:action.payload3};
             let quantityItem = action.payload2;
             let size = action.payload3;
+            let nameItem = state.products.find((e) => e.id === action.payload1).name;
             let priceItem = size==="XL"?
                 state.products.find((e) => e.id === action.payload1).value.XL
                 :size==="Small"?
@@ -58,7 +60,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem , value:priceItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem , value:priceItem, name:nameItem}]
                             }
             );
         };
