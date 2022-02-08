@@ -5,7 +5,6 @@ import { ButtonCardCart } from "./ButtonsCardCart/ButtonCardCart";
 export function ProductCardInCart(props) {
   const {value, data, quantity, id, addToCart, dellOneFromCart, dellAllFromCart, size}=props;
   let {name, url, description}=data;
-  console.log(value)
   
   return (
     <div className="productCardInCart">
