@@ -47,7 +47,7 @@ export function ShoppingCart() {
               quantity={item.quantity}
               size={item.size ? item.size : null}
               data={products.find((e) => e.id === item.dataID)}
-              value={products.find((e) => e.id === item.dataID).value}
+              value={item.value}
               addToCart={() => dispatch(addToCart(item.id))}
               dellOneFromCart={() => dispatch(dellFromCart(item.id))}
               dellAllFromCart={() => dispatch(dellFromCart(item.id, true))}

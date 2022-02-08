@@ -20,6 +20,7 @@ export function shoppingReducer(state = initialState, action){
         case ADD_TO_CART_MENU: {
             let newItem = {id:action.payload1, dataID:action.payload1};
             let quantityItem = action.payload2;
+            let priceItem = state.products.find((e) => e.id === action.payload1).value;
             let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
             return(
@@ -29,7 +30,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem, value:priceItem}]
                             }
             );
         };
@@ -37,6 +38,17 @@ export function shoppingReducer(state = initialState, action){
         case ADD_TO_CART_PIZZA: {
             let newItem = {id:action.payload1+action.payload3, dataID:action.payload1, size:action.payload3};
             let quantityItem = action.payload2;
+            let size = action.payload3;
+            let priceItem = size==="XL"?
+                state.products.find((e) => e.id === action.payload1).value.XL
+                :size==="Small"?
+                    state.products.find((e) => e.id === action.payload1).value.Small
+                    :size==="MS"?
+                        state.products.find((e) => e.id === action.payload1).value.MS
+                        :size==="individual"?
+                            state.products.find((e) => e.id === action.payload1).value.individual
+                            :null;
+
             let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
             return(
@@ -46,7 +58,7 @@ export function shoppingReducer(state = initialState, action){
                                 :item)}
                             :{
                             ...state,
-                            cart:[...state.cart, {...newItem, quantity:quantityItem}]
+                            cart:[...state.cart, {...newItem, quantity:quantityItem , value:priceItem}]
                             }
             );
         };

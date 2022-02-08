@@ -28,14 +28,14 @@ export function ProductCardInCart(props) {
               <h4>...{description}...</h4>
           </div>
           <div className="productValue">
-              <h3>${size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}"</h3>
+              <h3>${value}"</h3>
           </div>
         </div>
       </div>
       <div className="productButtons">
               <ButtonCardCart 
               quantity={quantity}
-              value={size?size==="XL"?value.XL:size==="Small"?value.Small:size==="MS"?value.MS:size==="individual"?value.individual:null:value}
+              value={value}
               id={id}
               addToCart={addToCart}
               dellOneFromCart={dellOneFromCart}/>
