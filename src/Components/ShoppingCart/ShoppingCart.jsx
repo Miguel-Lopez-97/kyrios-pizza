@@ -20,32 +20,66 @@ export function ShoppingCart() {
     }
   };
 
-
-  const totalArray = cart.map((item) => (item.quantity * item.value));
+  const totalArray = cart.map((item) => item.quantity * item.value);
   const sum = (previousValue, currentValue) => previousValue + currentValue;
-  const total = cart.length > 0 ? totalArray.reduce(sum) : null;
-  const productList =
-    cart.map((item) => ("%0a*" + item.name + "*%20" + "Cantidad:%20" + item.quantity + "%20Subtotal:%20" +
-      item.quantity * item.value + "%20"
-    ));
-  const apiMessage = "Hola%20KYRIO's,%0ami%20Nombre%20es:%20*" + userName + "*%0ami%20Número%20de%20celular%20es:%20*" + userPhone + "*%0aMi%20pedido%20es:%0a" + productList + "%0a%0aPara%20un%20Total%20de:%0a*" + total + "*%0a%0aMi%20Dirección%20es:%20*" + userAddress + "*%0aMensaje%20adicional:%0a_Por favor,"+userMessage+"_%0a*Gracias*"
+  const total = cart.length > 0 ? totalArray.reduce(sum) : 0;
+  const productList = cart.map(
+    (item) =>
+      "%0a*" +
+      item.name +
+      "*%20" +
+      "Cantidad:%20" +
+      item.quantity +
+      "%20Subtotal:%20" +
+      (item.quantity *
+        item.value).toLocaleString("es-CO", {
+          style: "currency",
+          currency: "COP",
+        }) +
+      "%20"
+  );
+  const apiMessage =
+    "Hola%20KYRIO's,%0ami%20Nombre%20es:%20*" +
+    userName +
+    "*%0ami%20Número%20de%20celular%20es:%20*" +
+    userPhone +
+    "*%0aMi%20pedido%20es:%0a" +
+    productList +
+    "%0a%0aPara%20un%20Total%20de:%0a*" +
+    total.toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+    }) +
+    "*%0a%0aMi%20Dirección%20es:%20*" +
+    userAddress +
+    "*%0aMensaje%20adicional:%0a_Por favor," +
+    userMessage +
+    "_%0a*Gracias*";
   const phoneNumber = 3192171931;
-  const urlApiWhatsApp = "https://api.whatsapp.com/send?phone=57"+phoneNumber+"&text="+apiMessage
+  const urlApiWhatsApp =
+    "https://api.whatsapp.com/send?phone=57" +
+    phoneNumber +
+    "&text=" +
+    apiMessage;
 
   const alertSend = () => {
-    if (window.confirm("Su pedido será gestionado a partir de WhatsApp, permita redireccionar el pedido, ¿Está seguro de los datos del pedido y el usuario son correctos? una vez enviado no podra acceder a ellos")) {
-      window.open(urlApiWhatsApp, '_blank');
+    if (
+      window.confirm(
+        "Su pedido será gestionado a partir de WhatsApp, permita redireccionar el pedido, ¿Está seguro de los datos del pedido y el usuario son correctos? una vez enviado no podra acceder a ellos"
+      )
+    ) {
+      window.open(urlApiWhatsApp, "_blank");
       setUserPhone("");
       setUserName("");
       setUserMessage("");
       setUserAddress("");
-      dispatch(clearCart())}
+      dispatch(clearCart());
+    }
   };
 
-
-  const handleSent = event => {
-    event.preventDefault()
-    alertSend()
+  const handleSent = (event) => {
+    event.preventDefault();
+    alertSend();
   };
   return (
     <div className="containerCart">
@@ -92,11 +126,20 @@ export function ShoppingCart() {
         <div className="resultCartText">
           <h2>TOTAL</h2>
           <h4>
-            {total < 12000 ? "Recuerde que el valor minimo para realizar el domicilio es de $12.000'' (Doce mill pesos)" : null}
+            {total < 12000
+              ? "Recuerde que el valor minimo para realizar el domicilio es de $12.000'' (Doce mill pesos)"
+              : null}
           </h4>
         </div>
         <div className="resultCartValue">
-          <h3>${cart.length > 0 ? total : "Valor Total"}"</h3>
+          <h3>
+            {cart.length > 0
+              ? total.toLocaleString("es-CO", {
+                  style: "currency",
+                  currency: "COP",
+                })
+              : "Valor Total"}
+          </h3>
         </div>
       </div>
       <section className="formCart">
@@ -133,7 +176,19 @@ export function ShoppingCart() {
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
           />
-          <input type="submit" id="submit" value="Enviar" disabled={total>12000 && userName!=="" && userAddress !=="" && userPhone !==""?false:true}/>
+          <input
+            type="submit"
+            id="submit"
+            value="Enviar"
+            disabled={
+              total > 12000 &&
+              userName !== "" &&
+              userAddress !== "" &&
+              userPhone !== ""
+                ? false
+                : true
+            }
+          />
         </form>
       </section>
     </div>

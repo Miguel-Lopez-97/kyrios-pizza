@@ -17,11 +17,11 @@ export function CategoryPizza(props) {
       <div className="selectCategory">
         <h2>PIZZAS</h2>
       </div>
-      <Pizza />
+      <Pizza key="001"/>
       <div className="selectCategory">
         <h2>Variedades y Sabores</h2>
       </div>
-      <Link to="/domiciles">Regresar al Menú</Link>
+      <Link to="/domiciles" key="002">Regresar al Menú</Link>
       <div className="productsList">
         {json.products.map((product) => {
           return product.id < 110 ? (
@@ -52,7 +52,7 @@ export function CategoryPizza(props) {
           );
         })}
       </div>
-      <Link to="/domiciles">Regresar al Menú</Link>
+      <Link to="/domiciles" key="003">Regresar al Menú</Link>
     </section>
   );
 }
