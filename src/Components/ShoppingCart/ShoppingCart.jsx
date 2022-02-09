@@ -65,7 +65,7 @@ export function ShoppingCart() {
   const alertSend = () => {
     if (
       window.confirm(
-        "Su pedido será gestionado a partir de WhatsApp, permita redireccionar el pedido, ¿Está seguro de los datos del pedido y el usuario son correctos? una vez enviado no podra acceder a ellos"
+        "¿Está seguro de los datos del pedido y el usuario son correctos?"
       )
     ) {
       window.open(urlApiWhatsApp, "_blank");
@@ -144,7 +144,8 @@ export function ShoppingCart() {
       </div>
       <section className="formCart">
         <h2>DATOS DEL PEDIDO</h2>
-        <form onSubmit={handleSent}>
+        <h5>El pedido será gestionado a través de la App de WhatsApp, por favor permita el direccionamiento una vez finalice su pedido</h5>
+        <form>
           <input
             type="text"
             id="name"
@@ -176,10 +177,9 @@ export function ShoppingCart() {
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
           />
-          <input
-            type="submit"
+          <button
+            onClick={handleSent}
             id="submit"
-            value="Enviar"
             disabled={
               total > 12000 &&
               userName !== "" &&
@@ -188,7 +188,10 @@ export function ShoppingCart() {
                 ? false
                 : true
             }
-          />
+          >
+            <h3>Enviar a WhatsApp</h3>
+            <img src="https://drive.google.com/uc?export=download&id=17J9ZT5AS9KkfI3cvq34vOyRNhxdATPVg" alt="" />
+          </button>
         </form>
       </section>
     </div>

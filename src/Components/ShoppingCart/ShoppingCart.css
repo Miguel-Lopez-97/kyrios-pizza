@@ -105,12 +105,18 @@ article.productsCart .productsSelectedCart {
     color: var(--colorNavWhite);
 }
 section.formCart{
+  text-align: center;
     display: flex;
     width: 80vw;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: max(2vh, 15px);
+}
+section.formCart h5{
+  max-width: 500px;
+  height: auto;
+  word-wrap: break-word;
 }
 section.formCart p{
   width: 500px;
@@ -139,14 +145,19 @@ section.formCart form #message::placeholder{
 }
 
 #submit{
+    display: flex;
     margin: max(5px, 1vh) 0;
+    align-items: center;
     padding: max(10px, 1vw) max(20px, 2vw);
-    background-color: var(--colorOldRed);
+    background-color: #008821;
     color: var(--colorNavWhite);
+}
+#submit img{
+  width: 30px;
 }
 
 #submit:hover {
-  background-color: var(--colorRed);
+  background-color: #00bb2d;
 }
 @media (max-width: 769px){
 section.formCart form #message{
