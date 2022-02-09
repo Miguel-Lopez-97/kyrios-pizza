@@ -52,10 +52,10 @@ section.categorySection
   .pizzaFullDescription {
   align-items: center;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   margin: 5px 0;
-  width: 90%;
+  width: 98%;
 }
 section.categorySection
   .productsList
@@ -63,29 +63,63 @@ section.categorySection
   .pizzaFullDescription
   .pizzaInfo {
   margin-top: 15px;
-  width: 90%;
+  width: 100%;
 }
+
+
 @media (max-width: 480px) {
   section.categorySection a {
     font-size: 0.9rem;
     padding: 10px;
   }
+  section.categorySection
+  .productsList
+  .pizzaCard:last-child
+  .pizzaFullDescription
+  .pizzaInfo h4{
+    font-size: 0.6rem;
+}
+
 }
 @media (min-width: 481px) and (max-width: 769px) {
   section.categorySection a {
     font-size: 1.2rem;
     padding: 15px;
   }
+  section.categorySection
+  .productsList
+  .pizzaCard:last-child
+  .pizzaFullDescription
+  .pizzaInfo h4{
+    font-size: 0.7rem;
+}
+
 }
 @media (min-width: 770px) and (max-width: 993px) {
   section.categorySection a {
     font-size: 1.4rem;
     padding: 20px;
   }
+  section.categorySection
+  .productsList
+  .pizzaCard:last-child
+  .pizzaFullDescription
+  .pizzaInfo h4{
+    font-size: 0.8rem;
+}
+
 }
 @media (min-width: 994px) {
   section.categorySection a {
     font-size: 1.6rem;
     padding: 25px;
   }
+  section.categorySection
+  .productsList
+  .pizzaCard:last-child
+  .pizzaFullDescription
+  .pizzaInfo h4{
+    font-size: 0.9rem;
+}
+
 }

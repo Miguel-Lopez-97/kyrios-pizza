@@ -21,6 +21,7 @@
   height: auto;
   justify-content: center;
   margin-bottom: 5px;
+  text-align: center;
   width: 90%;
 }
 .pizzaCard .pizzaSize {
@@ -100,13 +101,13 @@
     flex-direction: column;
   }
   .pizzaCard .pizzaFullDescription .pizzaImage {
-    width: 70%;
+    width: 100%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo {
     width: 100%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText {
-    min-width: 90%;
+    min-width: 100%;
   }
 }
 @media (min-width: 481px) and (max-width: 769px) {
@@ -115,10 +116,10 @@
     width: 400px;
   }
   .pizzaCard .pizzaFullDescription .pizzaImage {
-    width: 40%;
+    width: 60%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo {
-    width: 60%;
+    width: 40%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText {
     min-width: 90%;
@@ -130,10 +131,10 @@
     width: 400px;
   }
   .pizzaCard .pizzaFullDescription .pizzaImage {
-    width: 45%;
+    width: 55%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo {
-    width: 55%;
+    width: 45%;
   }
   .pizzaCard .pizzaFullDescription .pizzaInfo .pizzaDescriptionText {
     min-width: 93%;

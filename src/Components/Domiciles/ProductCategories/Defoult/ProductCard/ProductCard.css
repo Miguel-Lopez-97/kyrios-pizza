@@ -20,6 +20,7 @@
   height: auto;
   justify-content: center;
   margin-bottom: 5px;
+  text-align: center;
 }
 .productCard .productFullDescription {
   align-items: center;
@@ -77,13 +78,13 @@
     flex-direction: column;
   }
   .productCard .productFullDescription .productImage {
-    width: 70%;
+    width: 100%;
   }
   .productCard .productFullDescription .productInfo {
     width: 100%;
   }
   .productCard .productFullDescription .productInfo .productDescriptionText {
-    min-width: 90%;
+    min-width: 100%;
   }
 }
 @media (min-width: 481px) and (max-width: 769px) {
@@ -92,10 +93,10 @@
     width: 400px;
   }
   .productCard .productFullDescription .productImage {
-    width: 40%;
+    width: 60%;
   }
   .productCard .productFullDescription .productInfo {
-    width: 60%;
+    width: 40%;
   }
   .productCard .productFullDescription .productInfo .productDescriptionText {
     min-width: 90%;
@@ -107,10 +108,10 @@
     width: 400px;
   }
   .productCard .productFullDescription .productImage {
-    width: 45%;
+    width: 55%;
   }
   .productCard .productFullDescription .productInfo {
-    width: 55%;
+    width: 45%;
   }
   .productCard .productFullDescription .productInfo .productDescriptionText {
     min-width: 93%;

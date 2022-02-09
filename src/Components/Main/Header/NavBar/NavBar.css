@@ -12,6 +12,7 @@
   min-width: min(30vw, 25%);
   padding: 2vh;
   text-decoration: none;
+  z-index: 3;
 }
 .NavBar a img {
   align-self: center;

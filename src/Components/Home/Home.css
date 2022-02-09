@@ -23,6 +23,14 @@
   display: flex;
   flex-direction: column;
 }
+
+.contactPhones .phoneNumbers{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+}
+
 .contactLocation iframe {
   height: auto;
   margin: 2vw;
@@ -41,6 +49,10 @@
   align-items: center;
   align-self: center;
   display: flex;
+}
+.phoneNumber a{
+  text-decoration: none;
+  color: var(--colorTextBlack);
 }
 .socialHome {
   display: flex;

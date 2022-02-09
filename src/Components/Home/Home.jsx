@@ -71,7 +71,7 @@ export function Home() {
       <section className="contactHome">
         <div className="contactLocation">
           <h2>Visitanos</h2>
-          <h3>En la Carrera 19D # 61A - 38 Sur, San Francisco - La Acacia</h3>
+          <h3>En la Carrera 19D # 61A - 38 Sur, San Francisco - La Acacia, Servicio de Domicilios sujeto a ubicación del cliente</h3>
           <iframe
             title="iframeMap"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15908.714756566289!2d-74.1427077!3d4.5618709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe7284b3a10fe707!2sComidas%20Rapidas%20Kyrios%20Pizza!5e0!3m2!1ses-419!2sco!4v1643654393583!5m2!1ses-419!2sco"
@@ -80,19 +80,29 @@ export function Home() {
         </div>
         <div className="contactPhones">
           <h2>Contacto</h2>
-          <div className="phoneNumber">
-            <img
-              src="https://drive.google.com/uc?export=download&id=1QKMkNLfSGecNgO-hf76rftbpZg_I7eB4"
-              alt="icoPhone"
-            />
-            <h3>(601) 322-98-42</h3>
-          </div>
-          <div className="phoneNumber">
-            <img
-              src="https://drive.google.com/uc?export=download&id=1QKMkNLfSGecNgO-hf76rftbpZg_I7eB4"
-              alt="icoPhone"
-            />
-            <h3>(313) 281-29-17</h3>
+          <div className="phoneNumbers">
+            <div className="phoneNumber">
+              <a href="tel:+576013229842">
+                <img
+                  src="https://drive.google.com/uc?export=download&id=1QKMkNLfSGecNgO-hf76rftbpZg_I7eB4"
+                  alt="icoPhone"
+                />
+              </a>
+              <a href="tel:+576013229842">
+                <h3>(601) 322-98-42</h3>
+              </a>
+            </div>
+            <div className="phoneNumber">
+              <a href="tel:+573132812917">
+                <img
+                  src="https://drive.google.com/uc?export=download&id=1QKMkNLfSGecNgO-hf76rftbpZg_I7eB4"
+                  alt="icoPhone"
+                />
+              </a>
+              <a href="tel:+573132812917">
+                <h3>(313) 281-29-17</h3>
+              </a>
+            </div>
           </div>
         </div>
       </section>
