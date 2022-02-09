@@ -1,4 +1,4 @@
-import { AllProducts} from "../Domiciles/ProductCategories/Data/Categories";
+import { AllProducts} from "../Data/Categories";
 import {ADD_TO_CART, ADD_TO_CART_MENU, ADD_TO_CART_PIZZA, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FORM_CART} from "./types"
 
 export const initialState ={

@@ -28,6 +28,7 @@ section.categorySection .selectCategory {
   padding: 2vh;
   text-align: center;
   width: 100vw;
+  z-index: 3;
 }
 section.categorySection .selectCategory img {
   -moz-border-radius: 50%;

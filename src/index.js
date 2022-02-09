@@ -11,7 +11,7 @@ import { Unselect } from "./Components/Domiciles/ProductCategories/Unselect/Unse
 import { DefaultCategory } from "./Components/Domiciles/ProductCategories/Defoult/Default";
 import { CategoryPizza } from "./Components/Domiciles/ProductCategories/Defoult/DefaultPizza";
 import { ShoppingCart } from "./Components/ShoppingCart/ShoppingCart";
-import { Categories } from "./Components/Domiciles/ProductCategories/Data/Categories";
+import { Categories } from "./Components/Data/Categories";
 
 ReactDOM.render(
   <React.StrictMode>
