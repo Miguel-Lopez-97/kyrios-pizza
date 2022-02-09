@@ -8,7 +8,6 @@
   background-color: var(--colorOldRed);
   color: var(--colorNavWhite);
   display: flex;
-  font-family: "Open Sans", sans-serif;
   justify-content: center;
   min-width: min(30vw, 25%);
   padding: 2vh;

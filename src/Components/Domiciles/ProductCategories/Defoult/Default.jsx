@@ -9,10 +9,12 @@ export function DefaultCategory(props){
 
     return(
         <section className="categorySection">
+            
             <div className="selectCategory">
                 <img src={json.url} alt={"imagen de "+json.name}/>
                 <h2>{json.name}</h2>
             </div>
+            <Link to="/domiciles">Regresar al Menú</Link>
             <div className="productsList">
                 {json.products.map((product) =>{
                     return(

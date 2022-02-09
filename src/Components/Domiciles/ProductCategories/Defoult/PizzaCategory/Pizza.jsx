@@ -4,6 +4,9 @@ import "./Pizza.css";
 export function Pizza() {
   return (
     <>
+      <div className="pizzasSizesInfo">
+          <h2>Disfruta de nuestras pizzas acorde a tus necesidades, si tienes ganas de un antojo prueba nuestra porción tamaño personal, si el tema es de hambre una Pizza MS un aproximado de 4 porciones personales, para compartir con más amigos el tamaño Small (6 porciones personales aprox.) y el XL (8 porciones personales), recuerde que cada Pizza viene divida en 8 partes iguales, variando su tamaño acorde a las equivalencias explicadas anteriormente.</h2>
+      </div>
       <div className="pizzasSizes">
         <div className="pizzaSize">
           <div className="pizza xl">
@@ -37,9 +40,6 @@ export function Pizza() {
           <h2>Porción<br/>$5.000"</h2>
           </div>
         </div>
-      </div>
-      <div className="pizzasSizesInfo">
-          <h2>Disfruta de nuestras pizzas acorde a tus necesidades, si tienes ganas de un antojo prueba nuestra porción tamaño personal, si el tema es de hambre una Pizza MS un aproximado de 4 porciones individuales, para compartir con mas amigos el tamaño Small (6 porciones) y el XL (8 porciones), recuerde que puede mandar a porcionar cada pizza en mas porciones mas pequeñas.</h2>
       </div>
     </>
   );

@@ -5,7 +5,7 @@ export function Unselect(){
 
     return(
         <div className="unselectCategory">
-            <h2>SELECCIONE UNA CATEGORÍA</h2>
+            <h2>SELECCIONE UNA CATEGORÍA DEL MENU</h2>
         </div>
     );
 }

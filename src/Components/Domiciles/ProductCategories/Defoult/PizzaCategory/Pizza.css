@@ -1,8 +1,8 @@
 .pizzasSizes {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
-    width: 100vw;
+    width: 80vw;
     flex-wrap: wrap;
 }
 
@@ -30,23 +30,8 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.pizzasSizes .pizzaSize .xl{
-    width: 250px;
-    height: 250px;
-}
 
-.pizzasSizes .pizzaSize .small{
-    width: 200px;
-    height: 200px;
-}
-
-.pizzasSizes .pizzaSize .ms{
-    width: 150px;
-    height: 150px;
-}
 .pizzasSizes .pizzaSize .individual{
-    width: 120px;
-    height: 120px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -77,15 +62,96 @@
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    padding: 2px;
 }
 
 .pizzasSizesInfo{
     background-color: var(--colorDivInfo);
-    width: 90vw;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
-    padding: 20px;
+}
+
+@media (max-width: 480px){
+    .pizzasSizesInfo, .pizzasSizes .pizzaSize .pizza .info h2{font-size: 0.55rem;padding: 10px;
+   }
+   .pizzasSizes .pizzaSize .xl{
+    width: 120px;
+    height: 120px;
+}
+
+.pizzasSizes .pizzaSize .small{
+    width: 96px;
+    height: 96px;
+}
+
+.pizzasSizes .pizzaSize .ms{
+    width: 72px;
+    height: 72px;
+}
+.pizzasSizes .pizzaSize .individual{
+    width: 57.6px;
+    height: 57.6px;}
+}
+@media (min-width: 481px) and (max-width: 769px) {
+    .pizzasSizesInfo , .pizzasSizes .pizzaSize .pizza .info h2{font-size: 0.65rem;padding: 12px;}
+    .pizzasSizes .pizzaSize .xl{
+        width: 160px;
+        height: 160px;
+    }
+    
+    .pizzasSizes .pizzaSize .small{
+        width: 128px;
+        height: 128px;
+    }
+    
+    .pizzasSizes .pizzaSize .ms{
+        width: 96px;
+        height: 96px;
+    }
+    .pizzasSizes .pizzaSize .individual{
+        width: 76.8px;
+        height: 76.8px;}
+}
+@media (min-width: 770px) and (max-width: 993px) {
+    .pizzasSizesInfo , .pizzasSizes .pizzaSize .pizza .info h2{font-size: 0.8rem;padding: 15px;}
+    
+    .pizzasSizes .pizzaSize .xl{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .pizzasSizes .pizzaSize .small{
+        width: 160px;
+        height: 160px;
+    }
+    
+    .pizzasSizes .pizzaSize .ms{
+        width: 120px;
+        height: 120px;
+    }
+    .pizzasSizes .pizzaSize .individual{
+        width: 96px;
+        height: 96px;}
+}
+@media (min-width: 994px) {
+    .pizzasSizesInfo , .pizzasSizes .pizzaSize .pizza .info h2{font-size: 1rem; padding: 20px;}
+    .pizzasSizes .pizzaSize .xl{
+        width: 250px;
+        height: 250px;
+    }
+    
+    .pizzasSizes .pizzaSize .small{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .pizzasSizes .pizzaSize .ms{
+        width: 150px;
+        height: 150px;
+    }
+    .pizzasSizes .pizzaSize .individual{
+        width: 120px;
+        height: 120px;}
 }

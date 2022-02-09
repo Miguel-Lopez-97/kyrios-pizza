@@ -1,10 +1,10 @@
 export const Pizzas = JSON.parse(`{
     "id":1,
-    "name":"PIZZAS",
+    "name":"PIZZAS, Lasañas y Panzerotii",
     "url":"",
     "products":[
 			{"id":101,
-         	"name":"Hawaiana",
+         	"name":"Pizza Hawaiana",
          	"url":"",
          	"description":"Queso + Jamón + Piña",
          	"value":{
@@ -14,7 +14,7 @@ export const Pizzas = JSON.parse(`{
 				 "individual":5000
 			 }},
 			 {"id":102,
-         	"name":"Pollo con Champiñones",
+         	"name":"Pizza Pollo con Champiñones",
          	"url":"",
          	"description":"Queso + Pollo + Champiñones",
          	"value":{
@@ -24,7 +24,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":103,
-         	"name":"Pepperonni",
+         	"name":"Pizza de Pepperonni",
          	"url":"",
          	"description":"Queso + Jamón + Salami + Pepperoni",
          	"value":{
@@ -34,7 +34,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":104,
-         	"name":"Mexicana",
+         	"name":"Pizza Mexicana",
          	"url":"",
          	"description":"Queso + Carne Molida extraseca + Pico de Gallo + Maicitos + Jalapeño",
          	"value":{
@@ -44,7 +44,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":105,
-         	"name":"Ranchera",
+         	"name":"Pizza Ranchera",
          	"url":"",
          	"description":"Queso + Tocineta + Maiz Tierno en Salasa BBQ + Chorizo + Cebolla",
          	"value":{
@@ -54,7 +54,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":106,
-         	"name":"BBQ",
+         	"name":"Pizza BBQ",
          	"url":"",
          	"description":"Queso + Pollo Desmechado + Salsa BBQ",
          	"value":{
@@ -64,7 +64,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":107,
-         	"name":"Pollo Carne",
+         	"name":"Pizza Pollo Carne",
          	"url":"",
          	"description":"Queso + Jamón + Piña",
          	"value":{
@@ -74,7 +74,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":108,
-         	"name":"Americana",
+         	"name":"Pizza Americana",
          	"url":"",
          	"description":"Queso + Carne Desmechada + Salami + Pimentón y Cebolla",
          	"value":{
@@ -84,7 +84,7 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":109,
-         	"name":"Tropical",
+         	"name":"Pizza Tropical",
          	"url":"",
          	"description":"Queso + Piña + Uvas pasas + Cerezas",
          	"value":{
@@ -94,9 +94,9 @@ export const Pizzas = JSON.parse(`{
 				"individual":5000
 			}},
 			 {"id":100,
-         	"name":"Personalizada",
+         	"name":"Pizza Personalizada",
          	"url":"",
-         	"description":"Seleccione el tamaño de la pizza que quiere compartir, esta puede tener dos sabores distintos en su preparación, no olvide aclarar en el carrito de compras estos 2 sabores",
+         	"description":"Seleccione el tamaño de la pizza que quiere compartir, esta puede tener dos sabores distintos en su preparación para la MS o Small, mientras en la XL puede prepararse hasta en cuatro sabores, no olvide aclarar en el Carrito de Compras estos sabores",
          	"value":{
 				"XL":40000,
 				"Small":32000,

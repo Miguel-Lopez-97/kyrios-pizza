@@ -34,6 +34,7 @@ export function ProductCardInCart(props) {
       </div>
       <div className="productButtons">
               <ButtonCardCart 
+              key={"buttonProductCart"+id}
               quantity={quantity}
               value={value}
               id={id}

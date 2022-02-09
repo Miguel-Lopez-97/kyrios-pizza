@@ -83,10 +83,11 @@ article.productsCart .productsSelectedCart {
     width: 65%;
     flex-direction: column;
     background-color: var(--colorOrange);
-    padding: max(10px, 2vh) 0;
+    padding: max(10px, 2vh) max(20px, 2vw);
     align-items: center;
     justify-content: center;
     color: var(--colorNavWhite);
+  text-align: center;
 }
 .resultsCart .resultCartText h2{
     margin-bottom: 10px;

@@ -21,7 +21,7 @@ export function PizzaCard(props) {
           <button onClick={sizeXL}>XL</button>
           <button onClick={sizeSmall}>Small</button>
           <button onClick={sizeMS}>MS</button>
-          {name==="Personalizada"?null:<button onClick={sizeIndividual}>Individual</button>}
+          {name==="Pizza Personalizada"?null:<button onClick={sizeIndividual}>Individual</button>}
         </ul>
       </div>
       <div className="pizzaFullDescription">
@@ -35,7 +35,9 @@ export function PizzaCard(props) {
           <div className="pizzaValue">
             <h3>{size==="XL"?"$"+value.XL:size==="Small"?"$"+value.Small:size==="MS"?"$"+value.MS:size==="individual"?"$"+value.individual:"Seleccione el Tamaño"}</h3>
           </div>
-          {size===""?null:<div className="pizzaButtons"><ButtonCardPizza amount={amount} id={id} size={size}/></div>}
+          <div className="pizzaButtons">
+          {size===""?null:<div className="pizzaButtons"><ButtonCardPizza key={"buttonPizza"+id} amount={amount} id={id} size={size}/></div>}
+          </div>
         </div>
       </div>
     </div>

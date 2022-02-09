@@ -24,6 +24,7 @@ export function ProductCard(props) {
           </div>
           <div className="productButtons">
               <ButtonCard 
+              key={"buttonProduct"+id}
               amount={amount}
               id={id}/>
           </div>

@@ -1,9 +1,9 @@
 .NavBarMenu {
   display: flex;
   flex-direction: column;
-  height: 63vh;
   width: 100%;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
 }
 .NavBarMenu a {
@@ -11,13 +11,16 @@
   background-color: var(--colorRed);
   color: var(--colorNavWhite);
   display: flex;
-  font-family:'Comic Neue', cursive;
   justify-content: center;
   margin-bottom: 1vh;
   min-width: min(30vw, 25%);
-  padding: 2vh 0;
+  padding: 2vh 5px;
   text-decoration: none;
   overflow-y: hidden;
+}
+
+.NavBarMenu a:hover{
+  background-color: var(--colorOldRed);
 }
 
 @media (max-width: 480px){
@@ -34,6 +37,6 @@
         width: 65vw;}
 }
 @media (min-width: 994px) {
-    .NavBarMenu a {font-size: 1.8rem;
+    .NavBarMenu a {font-size: 1.6rem;
         width: 70vw;}
 }

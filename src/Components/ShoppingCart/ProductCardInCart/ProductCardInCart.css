@@ -1,145 +1,173 @@
-.productCardInCart{
-    display: flex;
-    flex-direction: column;
-    color: var(--colorTextBlack);
-    border-radius: 20px;
-    align-items: center;
-    justify-content: space-evenly;
-    height: auto;
-    padding: 5px;
-    margin-bottom: max(2vh,20px);
-    background-color: var(--colorDivInfo);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+.productCardInCart {
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  align-items: center;
+  background-color: var(--colorDivInfo);
+  border-radius: 20px;
+  color: var(--colorTextBlack);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-evenly;
+  margin-bottom: max(2vh, 20px);
+  padding: 5px;
 }
-
-.productCardInCart .productName{
-    display: flex;
+.productCardInCart .productName {
+  align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  width: 90%;
+}
+.productCardInCart .productName h3 {
+  text-align: center;
+  width: 80%;
+}
+.productCardInCart .productName button.productClearProduct {
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  align-self: flex-start;
+  background-color: var(--colorOldRed);
+  border-radius: 50%;
+  color: var(--colorNavWhite);
+  display: flex;
+  justify-self: right;
+  margin-right: 5px;
+  padding: 5px;
+}
+.productCardInCart .productFullDescription {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  min-height: 160px;
+  width: 90%;
+}
+.productCardInCart .productFullDescription .productImage {
+  align-items: center;
+  background-color: var(--colorOldRed);
+  display: flex;
+  height: auto;
+  justify-content: center;
+  width: 50%;
+}
+.productCardInCart .productFullDescription .productImage img {
+  border: solid 2px var(--colorOldRed);
+  height: auto;
+  width: 90%;
+}
+.productCardInCart .productFullDescription .productInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+  width: 45%;
+}
+.productCardInCart
+  .productFullDescription
+  .productInfo
+  .productDescriptionText {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  max-width: 200px;
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 90%;
+}
+.productCardInCart .productFullDescription .productInfo .productValue {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 90%;
+}
+.productCardInCart .productButtons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .productCardInCart {
+    min-height: 200px;
+    width: 300px;
+  }
+  .productCardInCart .productFullDescription {
+    flex-direction: column;
+  }
+  .productCardInCart .productFullDescription .productImage {
+    width: 70%;
+  }
+  .productCardInCart .productFullDescription .productInfo {
+    width: 100%;
+  }
+  .productCardInCart
+    .productFullDescription
+    .productInfo
+    .productDescriptionText {
     min-width: 90%;
-    height: auto;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;}
-
-.productCardInCart .productName h3{
-    text-align: center;
-    width: 80%;
-    }
-.productCardInCart .productName button.productClearProduct{
-    background-color: var(--colorOldRed);
-    display: flex;
-    color: var(--colorNavWhite);
-    padding: 5px;
-    justify-self: right;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    align-self: flex-start;
-    margin-right: 5px;
+  }
 }
-.productCardInCart .productFullDescription{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    width: 90%;
-    min-height: 160px;
-    justify-content: space-between;
-}
-
-.productCardInCart .productFullDescription .productImage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (min-width: 481px) and (max-width: 769px) {
+  .productCardInCart {
+    min-height: 250px;
+    width: 400px;
+  }
+  .productCardInCart .productFullDescription .productImage {
     width: 40%;
-    height: auto;
+  }
+  .productCardInCart .productFullDescription .productInfo {
+    width: 60%;
+  }
+  .productCardInCart
+    .productFullDescription
+    .productInfo
+    .productDescriptionText {
+    min-width: 90%;
+  }
 }
-
-.productCardInCart .productFullDescription .productImage img{
-    border-radius: 50%;
-    border: solid 2px var(--colorOldRed);
-    height: 100px;
-    width: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-
-.productCardInCart .productFullDescription .productInfo{
-    display: flex;
-    min-height: 144px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+@media (min-width: 770px) and (max-width: 993px) {
+  .productCardInCart {
+    min-height: 300px;
+    width: 400px;
+  }
+  .productCardInCart .productFullDescription .productImage {
+    width: 45%;
+  }
+  .productCardInCart .productFullDescription .productInfo {
     width: 55%;
-    padding: 2px;
+  }
+  .productCardInCart
+    .productFullDescription
+    .productInfo
+    .productDescriptionText {
+    min-width: 93%;
+  }
 }
-
-.productCardInCart .productFullDescription .productInfo .productDescriptionText{
-    display: flex;
-    width: 90%;
-    max-width: 200px;
-    overflow-wrap: break-word;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.productCardInCart .productFullDescription .productInfo .productValue{
-    display: flex;
-    width: 90%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.productCardInCart .productButtons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 480px){
-    .productCardInCart{
-        min-height: 200px;
-        min-width: 300px;
-    }
-    .productCardInCart .productFullDescription{flex-direction: column;}
-    .productCardInCart .productFullDescription .productImage{width: 70%;}
-    .productCardInCart .productFullDescription .productInfo{width: 100%;}
-    .productCardInCart .productFullDescription .productInfo .productDescriptionText{min-width: 90%;}
-}
-@media (min-width: 481px) and (max-width: 769px){
-    .productCardInCart{
-        min-height: 250px;
-        min-width: 400px;
-    }
-    .productCardInCart .productFullDescription .productImage{width: 40%;}
-    .productCardInCart .productFullDescription .productInfo{width: 60%;}
-    .productCardInCart .productFullDescription .productInfo .productDescriptionText{min-width: 90%;}
-}
-@media (min-width: 770px) and (max-width: 993px){
-    .productCardInCart{
-        min-height: 300px;
-        min-width: 400px;
-    }
-    .productCardInCart .productFullDescription .productImage{width: 45%;}
-    .productCardInCart .productFullDescription .productInfo{width: 55%;}
-    .productCardInCart .productFullDescription .productInfo .productDescriptionText{min-width: 93%;}
-}
-@media (min-width: 993px){
-    .productCardInCart{
-        min-height: 300px;
-        min-width: 450px;
-    }
-    .productCardInCart .productFullDescription .productImage{width: 50%;}
-    .productCardInCart .productFullDescription .productInfo{width: 50%;}
-    .productCardInCart .productFullDescription .productInfo .productDescriptionText{min-width: 95%;}
+@media (min-width: 993px) {
+  .productCardInCart {
+    min-height: 300px;
+    width: 450px;
+  }
+  .productCardInCart .productFullDescription .productImage {
+    width: 50%;
+  }
+  .productCardInCart .productFullDescription .productInfo {
+    width: 50%;
+  }
+  .productCardInCart
+    .productFullDescription
+    .productInfo
+    .productDescriptionText {
+    min-width: 95%;
+  }
 }
