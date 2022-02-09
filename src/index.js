@@ -12,11 +12,13 @@ import { DefaultCategory } from "./Components/Domiciles/ProductCategories/Defoul
 import { CategoryPizza } from "./Components/Domiciles/ProductCategories/Defoult/DefaultPizza";
 import { ShoppingCart } from "./Components/ShoppingCart/ShoppingCart";
 import { Categories } from "./Components/Data/Categories";
+import ScrollToTop from "./Components/Redux/ScrollToTop";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <HashRouter>
+      <ScrollToTop>
       <Routes>
         <Route path="/" element={<Main />}>
           <Route path="/" element={<Home />} />
@@ -56,6 +58,7 @@ ReactDOM.render(
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
       </Routes>
+      </ScrollToTop>
     </HashRouter>
     </Provider>
   </React.StrictMode>,
