@@ -35,6 +35,7 @@
   color: var(--colorNavWhite);
   padding: max(15px, 1vh) 0;
   width: 80vw;
+  text-align: center;
 }
 .containerCart .titleCart h2 {
   margin-bottom: max(10px, 1vh);
@@ -121,16 +122,18 @@ section.formCart form{
     justify-content: space-between;
     align-items: center;
 }
-section.formCart form input:not([type="submit"]){
+section.formCart form input:not([type="submit"]), section.formCart form textarea{
     min-width: max(60%, 200px);
     margin: max(5px, 1vh) 0;
     padding: max(10px, 1vw);
+    display: flex;
+    align-items: center;
 }
 section.formCart form #message{
     min-height: 60px;
 } 
 section.formCart form #message::placeholder{
-  white-space:pre-wrap;
+  white-space:normal;
   text-align: justify;
 }
 
@@ -144,3 +147,12 @@ section.formCart form #message::placeholder{
 #submit:hover {
   background-color: var(--colorRed);
 }
+@media (max-width: 769px){
+section.formCart form #message{
+  min-height: 120px;
+}}
+
+@media (min-width: 770px) and (max-width: 994px){
+  section.formCart form #message{
+    min-height: 80px;
+  }}

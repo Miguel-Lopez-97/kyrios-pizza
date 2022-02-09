@@ -28,7 +28,7 @@ export function ShoppingCart() {
     cart.map((item) => ("%0a*" + item.name + "*%20" + "Cantidad:%20" + item.quantity + "%20Subtotal:%20" +
       item.quantity * item.value + "%20"
     ));
-  const apiMessage = "Hola%20KYRIO's,%0ami%20Nombre%20es:%20*" + userName + "*%0ami%20Número%20de%20celular%20es:%20*" + userPhone + "*%0aMi%20pedido%20es:%0a" + productList + "%0a%0aPara%20un%20Total%20de:%0a*" + total + "*%0a%0aMi%20Dirección%20es:%20*" + userAddress + "*%0aMensaje%20adicional:%0a_Por favor"+userMessage+"_%0a*Gracias*"
+  const apiMessage = "Hola%20KYRIO's,%0ami%20Nombre%20es:%20*" + userName + "*%0ami%20Número%20de%20celular%20es:%20*" + userPhone + "*%0aMi%20pedido%20es:%0a" + productList + "%0a%0aPara%20un%20Total%20de:%0a*" + total + "*%0a%0aMi%20Dirección%20es:%20*" + userAddress + "*%0aMensaje%20adicional:%0a_Por favor,"+userMessage+"_%0a*Gracias*"
   const phoneNumber = 3192171931;
   const urlApiWhatsApp = "https://api.whatsapp.com/send?phone=57"+phoneNumber+"&text="+apiMessage
 
@@ -126,8 +126,7 @@ export function ShoppingCart() {
             value={userAddress}
             onChange={(e) => setUserAddress(e.target.value)}
           />
-          <input
-            type="text"
+          <textarea
             id="message"
             name="user_message"
             placeholder="Mensaje Adicional para su pedido, selección de saboreso especificaciones, ejemplo sabores de bebidas o de pizza personalizada, Hamburgesa sin salsas y cebolla, etc..."
