@@ -24,7 +24,7 @@ export function CategoryPizza(props) {
       <Link to="/domiciles" key="002">Regresar al Menú</Link>
      <div className="productsList">
         {json.products.map((product) => {
-          return product.id < 110 ? (
+          return product.id < 1000 ? (
             <PizzaCard
               key={product.id}
               id={product.id}
@@ -40,7 +40,7 @@ export function CategoryPizza(props) {
       </div>
       <div className="productsList">
         {json.products.map((product) => {
-          return product.id < 110 ? null : (
+          return product.id < 1000 ? null : (
               <ProductCard
                 key={product.id}
                 id={product.id}

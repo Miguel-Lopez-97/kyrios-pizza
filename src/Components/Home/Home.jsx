@@ -61,10 +61,14 @@ export function Home() {
         <div className="storyHome">
           <h2>Comidas Rapidas Kyrio's Pizza</h2>
           <p>
-            Hola Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
-            delectus. Mollitia itaque optio exercitationem ipsum, eos aut
-            consectetur perferendis aperiam. Facere nisi amet nobis dignissimos
-            cumque, pariatur ipsum et ipsam.
+            Bienvenido a nuestro Gran Negocio Familiar, Disfruta de las mejores
+            Pizzas y Comidas Rápidas del Sector de San Francisco - La Acacia,
+            con más de 15 años de experiencia complaciendo a nuestra distinguida
+            clientela, te esperamos con los brazos abiertos para brindarte una
+            experiencia gastronómica de primera, ya sea en nuestras
+            instalaciones o enviándote a tu hogar los productos que prefieras,
+            hecha les un vistazo en nuestra sección Domicilios y si te antojaste
+            de algo no dudes en agregarlo al Carrito de compras para gestionar tu Pedido.
           </p>
         </div>
       </section>
