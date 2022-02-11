@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { carouselImage } from "./CarouselImage";
 import { ButtonCarousel } from "./ButtonCarousel/ButtonCarousel";
@@ -24,6 +24,9 @@ export function Home() {
   const onChange = (props) => {
     setImage(props);
   };
+
+  const timer = () => { setTimeout(onRight, 5000)}
+  useEffect(()=>{timer()})
 
   return (
     <div className="containerHome">
