@@ -1,8 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kyrios's App",
+  "name": "Kyrio's Comidas Rapidas",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#6e080e",
   "background_color": "#ffffff"
 }
