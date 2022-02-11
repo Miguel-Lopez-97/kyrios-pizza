@@ -162,9 +162,17 @@ section.formCart form #message::placeholder{
 @media (max-width: 769px){
 section.formCart form #message{
   min-height: 120px;
-}}
+}
+.resultsCart .resultCartText{
+  width: 40%;
+}
+.resultsCart .resultCartValue{
+  width: 60%;
+}
+}
 
 @media (min-width: 770px) and (max-width: 994px){
   section.formCart form #message{
     min-height: 80px;
-  }}
+  }
+}

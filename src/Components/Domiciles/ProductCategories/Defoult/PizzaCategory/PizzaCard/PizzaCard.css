@@ -54,7 +54,6 @@
   display: flex;
   height: auto;
   justify-content: center;
-  max-width: 50%;
 }
 .pizzaCard .pizzaFullDescription .pizzaImage img {
   border: solid 2px var(--colorOldRed);

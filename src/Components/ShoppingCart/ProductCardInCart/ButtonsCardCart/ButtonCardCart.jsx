@@ -5,7 +5,7 @@ export function ButtonCardCart(props) {
   const { quantity, value, id, dellOneFromCart, addToCart } = props;
 
   return (
-    <>
+    <div className="ButtonCardCart">
       <div className="buttonAmountChange">
         <button onClick={() => dellOneFromCart(id, false)}>-</button>
         <h3>{quantity}</h3>
@@ -18,6 +18,6 @@ export function ButtonCardCart(props) {
             currency: "COP",
           })}
       </h2>
-    </>
+    </div>
   );
 }

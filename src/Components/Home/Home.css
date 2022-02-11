@@ -115,6 +115,7 @@
 }
 
 @media (max-width: 480px) {
+  .contactLocation iframe {height: 40%;}
   .carouselImageHome .imageHome {
     height: 50vh;
   }
@@ -160,7 +161,7 @@
   }
   .contactHome {
     align-items: center;
-    height: 60vh;
+    height: auto;
     justify-content: space-between;
   }
   .contactLocation {
@@ -202,7 +203,7 @@
     justify-content: space-between;
   }
   .contactLocation {
-    height: 100%;
+    height: auto;
     justify-content: space-evenly;
     width: 60%;
   }
@@ -246,7 +247,7 @@
     justify-content: space-between;
   }
   .contactLocation {
-    height: 100%;
+    height: auto;
     justify-content: space-evenly;
     width: 65%;
   }
