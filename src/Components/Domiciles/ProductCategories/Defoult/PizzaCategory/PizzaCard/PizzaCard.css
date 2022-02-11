@@ -13,6 +13,7 @@
   justify-content: space-evenly;
   margin-bottom: max(2vh, 20px);
   padding: 5px;
+  margin: max(1vw,10px);
 }
 .pizzaCard .pizzaName {
   align-items: center;

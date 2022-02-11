@@ -43,10 +43,16 @@ section.categorySection .selectCategory img {
 section.categorySection .productsList {
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
   justify-content: space-evenly;
   margin-top: 5vh;
   width: 90%;
 }
+section.categorySection
+  .productsList
+  .pizzaCard:last-child{
+    align-self: flex-end;
+  }
 section.categorySection
   .productsList
   .pizzaCard:last-child
