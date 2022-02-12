@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { carouselImage } from "./CarouselImage";
-import { ButtonCarousel } from "./ButtonCarousel/ButtonCarousel";
-import { ButtonChange } from "./ButtonChange/ButtonChange";
 
 export function Home() {
   const [image, setImage] = useState(0);
@@ -14,44 +12,18 @@ export function Home() {
       setImage(0);
     }
   };
-  const onLeft = () => {
-    if (image > 0) {
-      setImage(image - 1);
-    } else {
-      setImage(carouselImage.length - 1);
-    }
-  };
-  const onChange = (props) => {
-    setImage(props);
-  };
 
-  const timer = () => { setTimeout(onRight, 5000)}
+  const timer = () => { setTimeout(onRight, 5000)};
+
   useEffect(()=>{timer()})
 
   return (
     <div className="containerHome">
       <section className="carouselImageHome">
         <div className="imageHome">
-          <ButtonChange
-            key={"buttonChangeLeft"}
-            onChange={onLeft}
-            ico="https://drive.google.com/uc?export=download&id=1oCKFjxAWOLbh1bvUlYOBvf1txXu2oq3i"
-          />
+          
           <img id="carouselImage" src={carouselImage[image].url} alt="imagen" />
-          <ButtonChange
-            key={"buttonChangeRight"}
-            onChange={onRight}
-            ico="https://drive.google.com/uc?export=download&id=1ilO35o7k7KNaP8RjG5sk_bwyM08-wV1x"
-          />
-        </div>
-        <div className="buttonsCarousel">
-          {carouselImage.map((el) => (
-            <ButtonCarousel
-              onChange={onChange}
-              key={"buttonImage" + el.id}
-              index={el.position}
-            />
-          ))}
+    
         </div>
       </section>
       <section className="socialHome">
