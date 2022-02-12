@@ -1,14 +1,14 @@
-footer{
-    background-color: var(--colorOldRed);
-    color: var(--colorTextWhite);
-    width: 100vw;
-    height: auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 2vh;
+footer {
+  align-items: center;
+  background-color: var(--colorOldRed);
+  color: var(--colorTextWhite);
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding: 2vh;
+  text-align: center;
+  width: 100vw;
 }
-footer h3{
-    margin:1vh
+footer h3 {
+  margin: 1vh;
 }

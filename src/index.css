@@ -1,8 +1,8 @@
 body, *{
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 a,button{
@@ -10,15 +10,15 @@ a,button{
 }
 
 :root{
-  --colorOldRed:#6e080e;
-  --colorRed:#dc101c;
-  --colorYellow:#dcd010;
-  --colorOrange:#dc6a10;
-  --colorTextWhite:#feedee;
-  --colorNavWhite:#f6f5f5;
-  --colorTextBlack:#140000;
-  --colorDivInfo:#f8f3a499;
   --colorButtonCarousel:#370407;
+  --colorDivInfo:#f8f3a499;
+  --colorNavWhite:#f6f5f5;
+  --colorOldRed:#6e080e;
+  --colorOrange:#dc6a10;
+  --colorRed:#dc101c;
+  --colorTextBlack:#140000;
+  --colorTextWhite:#feedee;
+  --colorYellow:#dcd010;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Open+Sans:wght@600&display=swap');

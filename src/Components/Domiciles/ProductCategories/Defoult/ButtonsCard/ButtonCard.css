@@ -1,43 +1,43 @@
-.buttonAmountChange{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100px;
-    padding: 10px;
+.buttonAmountChange {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100px;
 }
-
-.buttonAmountChange button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 30px;
-    min-height: 30px;
-    border-radius: 50%;
-    color: var(--colorNavWhite);
-    background-color: var(--colorOldRed);
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 1s;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
+.buttonAmountChange button {
+  -moz-border-radius: 50%;
+  -moz-transition: all 1s;
+  -ms-border-radius: 50%;
+  -ms-transition: all 1s;
+  -o-border-radius: 50%;
+  -o-transition: all 1s;
+  -webkit-border-radius: 50%;
+  -webkit-transition: all 1s;
+  align-items: center;
+  background-color: var(--colorOldRed);
+  border-radius: 50%;
+  color: var(--colorNavWhite);
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: center;
+  min-height: 30px;
+  min-width: 30px;
+  transition: all 1s;
 }
-.buttonAmountChange button:disabled, button.buttonAmountSend:disabled{
-    background-color: var(--colorRed);
+.buttonAmountChange button:disabled,
+button.buttonAmountSend:disabled {
+  background-color: var(--colorRed);
 }
 button.buttonAmountSend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    color: var(--colorNavWhite);
-    background-color: var(--colorOldRed);
-    font-size: 0.8rem;
-    font-weight: 700;
-    transition: all 1s;
+  align-items: center;
+  background-color: var(--colorOldRed);
+  color: var(--colorNavWhite);
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  justify-content: center;
+  padding: 10px;
+  transition: all 1s;
 }

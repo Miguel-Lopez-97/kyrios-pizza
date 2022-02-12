@@ -1,3 +1,5 @@
+/* Cualquier otro producto relacionado con pizzas tiene el id apartir del numero 1000, y de pizzas apartir del 100 */
+
 export const Pizzas = JSON.parse(`{
     "id":1,
     "name":"PIZZAS, Lasañas y Panzerotii",

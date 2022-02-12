@@ -16,8 +16,8 @@ button.buttonChange {
   width: 50px;
   z-index: 1;
 }
-@media (max-width: 769px){
-  button.buttonChange{
+@media (max-width: 769px) {
+  button.buttonChange {
     display: none;
   }
 }

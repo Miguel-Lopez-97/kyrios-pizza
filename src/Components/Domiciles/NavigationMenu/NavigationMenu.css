@@ -1,42 +1,47 @@
 .NavBarMenu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-}
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+  }
 .NavBarMenu a {
-  align-items: center;
-  background-color: var(--colorRed);
-  color: var(--colorNavWhite);
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1vh;
-  min-width: min(30vw, 25%);
-  padding: 2vh 5px;
-  text-decoration: none;
-  overflow-y: hidden;
-}
-
+    align-items: center;
+    background-color: var(--colorRed);
+    color: var(--colorNavWhite);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+    min-width: min(30vw, 25%);
+    overflow-y: hidden;
+    padding: 2vh 5px;
+    text-decoration: none;
+  }
 .NavBarMenu a:hover{
-  background-color: var(--colorOldRed);
-}
-
+    background-color: var(--colorOldRed);
+  }
 @media (max-width: 480px){
-    .NavBarMenu a {font-size: 0.9rem;
-        width: 55vw;
-   }
+    .NavBarMenu a {
+font-size: 0.9rem;
+width: 55vw;
 }
+    }
 @media (min-width: 481px) and (max-width: 769px) {
-    .NavBarMenu a {font-size: 1.2rem;
-        width: 60vw;}
+    .NavBarMenu a {
+font-size: 1.2rem;
+width: 60vw;
 }
+    }
 @media (min-width: 770px) and (max-width: 993px) {
-    .NavBarMenu a {font-size: 1.4rem;
-        width: 65vw;}
+    .NavBarMenu a {
+font-size: 1.4rem;
+width: 65vw;
 }
+    }
 @media (min-width: 994px) {
-    .NavBarMenu a {font-size: 1.6rem;
-        width: 70vw;}
+    .NavBarMenu a {
+font-size: 1.6rem;
+width: 70vw;
 }
+    }

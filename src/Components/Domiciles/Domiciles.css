@@ -1,53 +1,66 @@
 .containerDomiciles {
-    align-items: center;
-    background: linear-gradient(var(--colorOrange) 20%, var(--colorYellow) 80%);
-    color: var(--colorTextBlack);
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-  }
-
-  .domicilesMenu{
+  align-items: center;
+  background: linear-gradient(var(--colorOrange) 20%, var(--colorYellow) 80%);
+  color: var(--colorTextBlack);
   display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  width: 100vw;
+}
+.domicilesMenu {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
   width: 90vw;
-  justify-content: space-around;
+}
+.domicilesMenu .logoDomiciles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.domicilesMenu .logoDomiciles img {
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: var(--colorTextBlack) solid 3px;
+  width: 95%;
+}
+.domicilesMenu .navDomiciles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .domicilesMenu .navDomiciles {
+    width: 60vw;
   }
-
   .domicilesMenu .logoDomiciles {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    width: 35vw;
   }
-  .domicilesMenu .logoDomiciles img {
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border: var(--colorTextBlack) solid 3px;
-    width: 95%;
-  }
-
-  .domicilesMenu .navDomiciles{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-@media (max-width: 480px){
-    .domicilesMenu .navDomiciles{width: 60vw;}
-    .domicilesMenu .logoDomiciles {width: 35vw;}
 }
 @media (min-width: 481px) and (max-width: 769px) {
-    .domicilesMenu .navDomiciles{width: 55vw;}
-    .domicilesMenu .logoDomiciles {width: 30vw;}
+  .domicilesMenu .navDomiciles {
+    width: 55vw;
+  }
+  .domicilesMenu .logoDomiciles {
+    width: 30vw;
+  }
 }
 @media (min-width: 770px) and (max-width: 993px) {
-    .domicilesMenu .navDomiciles{width: 50vw;}
-    .domicilesMenu .logoDomiciles {width: 25vw;}
+  .domicilesMenu .navDomiciles {
+    width: 50vw;
+  }
+  .domicilesMenu .logoDomiciles {
+    width: 25vw;
+  }
 }
 @media (min-width: 994px) {
-    .domicilesMenu .navDomiciles{width: 45vw;}
-    .domicilesMenu .logoDomiciles {width: 20vw;}
+  .domicilesMenu .navDomiciles {
+    width: 45vw;
+  }
+  .domicilesMenu .logoDomiciles {
+    width: 20vw;
+  }
 }

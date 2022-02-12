@@ -1,5 +1,6 @@
-header{
-    background-color: var(--colorRed);
-    z-index: 3;
-    height: 80px;
+header {
+  background-color: var(--colorRed);
+  height: 75px;
+  position: fixed;
+  z-index: 4;
 }

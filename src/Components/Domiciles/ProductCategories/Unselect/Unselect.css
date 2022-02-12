@@ -1,17 +1,18 @@
-.unselectCategory{
-      align-items:center;
-      background-color: var(--colorRed);
-      color: var(--colorNavWhite);
-      display: flex;
-      height: auto;
-      justify-content: center;
-      text-align: center;
-      width: 100vw;
-      font-size: 1rem;
-      padding: 15px;
-      z-index: 2;
+.unselectCategory {
+  align-items: center;
+  background-color: var(--colorRed);
+  color: var(--colorNavWhite);
+  display: flex;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  width: 100vw;
+  z-index: 2;
+}
+@media (max-width: 480px) {
+  .unselectCategory {
+    font-size: 2vh;
   }
-
-  @media (max-width: 480px){
-    .unselectCategory{ font-size: 2vh;}
-  }
+}
