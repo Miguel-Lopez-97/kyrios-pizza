@@ -15,7 +15,7 @@ export const PataconesOthers = JSON.parse(`{
          	"value":15000},
              {"id":503,
          	"name":"Mazorcada",
-         	"url":"https://drive.google.com/uc?export=download&id=1mqdXlcCtcE5HwnGRa3dmviai2h7goVzl",
+         	"url":"https://drive.google.com/uc?export=download&id=1GZHKzlqLAaYjo2DpDpv7KLrY6_vyo4wb",
          	"description":"Maiz Tierno + Pollo Desmechado + Queso + Carne Desmechada + Pedacitos de Costillas + Salsa Dulce de Maiz + 2 Huevos de Codorniz + Papitas Chips + Francesa",
          	"value":16000},
              {"id":504,

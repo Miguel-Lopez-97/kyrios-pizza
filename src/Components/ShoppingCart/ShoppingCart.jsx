@@ -124,7 +124,7 @@ export function ShoppingCart() {
       </article>
       <div className="resultsCart">
         <div className="resultCartText">
-          <h2>TOTAL</h2>
+          <h3>TOTAL</h3>
           <h4>
             {total < 12000
               ? "Recuerde que el valor minimo para realizar el domicilio es de $12.000'' (Doce mill pesos)"

@@ -4,6 +4,7 @@ section.categorySection {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 75px;
   margin-bottom: 5vh;
   width: 100vw;
 }
@@ -13,6 +14,7 @@ section.categorySection a {
   display: flex;
   margin-top: 2vh;
   text-decoration: none;
+  padding: 5px;
 }
 section.categorySection a:hover {
   background-color: var(--colorOldRed);
@@ -24,7 +26,7 @@ section.categorySection .selectCategory {
   color: var(--colorNavWhite);
   display: flex;
   height: auto;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 2vh;
   text-align: center;
   width: 100vw;
@@ -36,9 +38,9 @@ section.categorySection .selectCategory img {
   -o-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  height: 10vh;
-  margin-right: 5vw;
-  width: 10vh;
+  height: 15vh;
+  margin-left: 5vw;
+  width: 15vh;
 }
 section.categorySection .productsList {
   align-content: center;

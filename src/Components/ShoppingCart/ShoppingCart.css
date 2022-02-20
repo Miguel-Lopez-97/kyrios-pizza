@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 75px;
+  justify-self: center;
+  margin-top: 75px;
+  width: 90vw;
 }
 .containerCart .infoCart,
 .containerCart .titleCart {
@@ -35,14 +37,13 @@
   color: var(--colorNavWhite);
   padding: max(15px, 1vh) 0;
   text-align: center;
-  width: 80vw;
+  width: 90vw;
 }
 .containerCart .titleCart h2 {
   margin-bottom: max(10px, 1vh);
 }
 article.productsCart {
   align-items: center;
-  border: var(--colorRed) solid 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

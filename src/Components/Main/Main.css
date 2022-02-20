@@ -1,4 +1,5 @@
 .container {
+  align-items: center;
   background: linear-gradient(var(--colorRed) 20%, var(--colorOrange) 80%);
   display: flex;
   flex-direction: column;
