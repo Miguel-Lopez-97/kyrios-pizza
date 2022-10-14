@@ -20,7 +20,7 @@ _These instructions will allow you to get a working copy of the project on your 
 
 ## Deployment 📦
 
-_The deployment of this project was done in [**netlify**]()_
+_The deployment of this project was done in [**netlify**](https://miguel-lopez-market-place.netlify.app/)_
 
 ## Built with 🛠️
 
