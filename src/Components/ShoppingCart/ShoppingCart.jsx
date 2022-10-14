@@ -55,7 +55,7 @@ export function ShoppingCart() {
     "*%0aMensaje%20adicional:%0a_Por favor," +
     userMessage +
     "_%0a*Gracias*";
-  const phoneNumber = 3192171931;
+  const phoneNumber = 3010000000;
   const urlApiWhatsApp =
     "https://api.whatsapp.com/send?phone=57" +
     phoneNumber +
